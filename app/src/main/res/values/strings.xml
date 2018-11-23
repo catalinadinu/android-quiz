@@ -3,4 +3,13 @@
     <string name="id_titlu">Bine ai venit!</string>
     <string name="id_inregistrare">Înregristrare</string>
     <string name="id_conectare">Conectare</string>
+    <string name="id_titluInregistrare">Înregistrează-te!</string>
+    <string name="id_numeInregistrare">Nume</string>
+    <string name="id_prenumeInregistrare">Prenume</string>
+    <string name="id_mailInregistrare">E-mail</string>
+    <string name="id_parolaInregistrare">Parola</string>
+    <string name="id_confirmParolaInreg">Confirmă parola</string>
+    <string name="id_profilProf">Profil profesor</string>
+    <string name="id_profilStud">Profil student</string>
+    <string name="id_butonInregistreaza">Creează cont</string>
 </resources>
