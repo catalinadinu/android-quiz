@@ -1,22 +1,30 @@
 <resources>
     <string name="app_name">AndroidQuiz</string>
     <string name="id_titlu">Bine ai venit!</string>
-    <string name="id_inregistrare">Înregristrare</string>
     <string name="id_conectare">Conectare</string>
-    <string name="id_titluInregistrare">Înregistrează-te!</string>
-    <string name="id_numeInregistrare">Nume</string>
-    <string name="id_prenumeInregistrare">Prenume</string>
-    <string name="id_mailInregistrare">E-mail</string>
-    <string name="id_parolaInregistrare">Parola</string>
-    <string name="id_confirmParolaInreg">Confirmă parola</string>
+    <string name="id_inregistrare">Înregistrare</string>
+    <string name="id_numeProfI">Nume</string>
+    <string name="id_prenumeProfI">Prenume</string>
+    <string name="id_numeStudI">Nume</string>
+    <string name="id_prenumeStudI">Prenume</string>
+    <string name="id_mailStudI">E-mail</string>
+    <string name="id_parolaStudI">Parola</string>
+    <string name="id_confirmParolaStudI">Confirmă parola</string>
+    <string name="id_mailProfI">E-mail</string>
+    <string name="id_parolaProfI">Parola</string>
+    <string name="id_confirmParolaProfI">Confirmă parola</string>
     <string name="id_profilProf">Profil profesor</string>
     <string name="id_profilStud">Profil student</string>
     <string name="id_radioGrup"></string>
     <string name="id_butonInregistreaza">Creează cont</string>
     <string name="id_titluConectare">Conectează-te!</string>
+    <string name="id_butonInregistreazaStud">Creează cont</string>
+    <string name="id_titluConectareStud">Conectează-te!</string>
     <string name="id_emailConectare">E-mail</string>
     <string name="id_parolaConectare">Parolă</string>
     <string name="id_butonConectare">Conectare</string>
     <string name="id_codProf">Cod</string>
     <string name="profilMain">Selectează profilul!</string>
+    <string name="inregistrareProfilProf">Înregistrare profil profesor</string>
+    <string name="inregistrarePrStud">Înregistrare profil student</string>
 </resources>
