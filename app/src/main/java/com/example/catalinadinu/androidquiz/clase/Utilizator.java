@@ -31,11 +31,6 @@ public class Utilizator implements Serializable {
         sb.append(parola);
         sb.append(", ");
         sb.append(tipUtilizator);
-//        sb.append(tipUtilizatorProf);
-//        sb.append(", ");
-//        sb.append(tipUtilizatorStud);
-//        sb.append(".");
-
         return sb.toString();
     }
 }

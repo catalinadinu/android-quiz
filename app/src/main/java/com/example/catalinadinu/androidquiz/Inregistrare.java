@@ -22,8 +22,7 @@ public class Inregistrare extends AppCompatActivity {
     private EditText email;
     private EditText parola;
     private RadioGroup radioGroupTip;
-    //private RadioButton radioButtonTipUtil;
-    //private Button butonCreareCont;
+    private Button creeazaCont;
 
 
     @Override
@@ -36,8 +35,8 @@ public class Inregistrare extends AppCompatActivity {
         email=findViewById(R.id.id_mailInregistrare);
         parola=findViewById(R.id.id_parolaInregistrare);
         radioGroupTip = findViewById(R.id.id_radioGrup);
+        creeazaCont=findViewById(R.id.buttonInregistrare);
 
-        //addListenerOnButton();
     }
 
 //    public void addListenerOnButton(){
@@ -89,10 +88,17 @@ public class Inregistrare extends AppCompatActivity {
                 Utilizator utilizator = new Utilizator(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                         parola.getText().toString(), radioValue);
                 //Toast.makeText(Inregistrare.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent();
-                intent.putExtra("util", utilizator);
-                setResult(RESULT_OK, intent);
-                finish();
+//                Intent intent = new Intent();
+//                intent.putExtra("util", utilizator);
+//                setResult(RESULT_OK, intent);
+//                finish();
+                creeazaCont.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intentConectare = new Intent(Inregistrare.this, Conectare.class);
+                        startActivityForResult(intentConectare, 2);
+                    }
+                });
             }
         }
     }
