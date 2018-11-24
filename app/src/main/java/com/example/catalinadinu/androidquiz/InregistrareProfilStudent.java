@@ -15,65 +15,38 @@ import android.widget.Toast;
 
 import com.example.catalinadinu.androidquiz.clase.Utilizator;
 
-public class Inregistrare extends AppCompatActivity {
+public class InregistrareProfilStudent extends AppCompatActivity {
 
     private EditText nume;
     private EditText prenume;
     private EditText email;
     private EditText parola;
-    private RadioGroup radioGroupTip;
+    //private RadioGroup radioGroupTip;
     private Button creeazaCont;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inregistrare);
+        setContentView(R.layout.activity_inregistrare_profil_student);
 
-        nume=findViewById(R.id.id_numeInregistrare);
-        prenume=findViewById(R.id.id_prenumeInregistrare);
-        email=findViewById(R.id.id_mailInregistrare);
-        parola=findViewById(R.id.id_parolaInregistrare);
-        radioGroupTip = findViewById(R.id.id_radioGrup);
-        creeazaCont=findViewById(R.id.buttonInregistrare);
+        //nume=findViewById(R.id.id_numeInregistrare);
+        //prenume=findViewById(R.id.id_prenumeInregistrare);
+        //email=findViewById(R.id.id_mailInregistrare);
+        //parola=findViewById(R.id.id_parolaInregistrare);
+        //radioGroupTip = findViewById(R.id.id_radioGrup);
+        //creeazaCont=findViewById(R.id.buttonInregistrare);
 
-    }
-
-//    public void addListenerOnButton(){
-//
-//        butonCreareCont.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                int selectedId = radioGroupTip.getCheckedRadioButtonId();
-//                radioButtonTipUtil = findViewById(selectedId);
-//                Toast.makeText(Inregistrare.this, radioButtonTipUtil.getText(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-
-    public void onRadioButtonClicked(View view)
-    {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch(view.getId())
-        {
-            case(R.id.id_profilProf):
-                if(checked)
-                    break;
-            case(R.id.id_profilStud):
-                if(checked)
-                    break;
-        }
     }
 
 
     public void creeazaCont(View view)
     {
-        if(nume!=null && prenume!=null && email!=null && parola!=null && radioGroupTip.getCheckedRadioButtonId() != -1)
+        if(nume!=null && prenume!=null && email!=null && parola!=null)
         {
             if("".equals(nume.getText().toString()) || "".equals(prenume.getText().toString()) ||
                     "".equals(email.getText().toString()) || "".equals(parola.getText().toString()) ||
-                    "".equals(nume.getText().toString()) || radioGroupTip.getCheckedRadioButtonId() == -1)
+                    "".equals(nume.getText().toString()))
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Eroare");
@@ -84,9 +57,9 @@ public class Inregistrare extends AppCompatActivity {
             }
             else
             {
-                String radioValue = ((RadioButton)findViewById(radioGroupTip.getCheckedRadioButtonId())).getText().toString();
+                //String radioValue = ((RadioButton)findViewById(radioGroupTip.getCheckedRadioButtonId())).getText().toString();
                 Utilizator utilizator = new Utilizator(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
-                        parola.getText().toString(), radioValue);
+                        parola.getText().toString());
                 //Toast.makeText(Inregistrare.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
 //                Intent intent = new Intent();
 //                intent.putExtra("util", utilizator);
@@ -95,7 +68,7 @@ public class Inregistrare extends AppCompatActivity {
                 creeazaCont.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intentConectare = new Intent(Inregistrare.this, Conectare.class);
+                        Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
                         startActivityForResult(intentConectare, 2);
                     }
                 });

@@ -17,9 +17,10 @@
         android:text="@string/id_conectare"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.852" />
 
     <Button
         android:id="@+id/id_inregistrare"
@@ -32,9 +33,10 @@
         android:text="@string/id_inregistrare"
         app:layout_constraintBottom_toTopOf="@+id/id_conectare"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.871" />
 
     <TextView
         android:id="@+id/id_titlu"
@@ -44,11 +46,55 @@
         android:layout_marginTop="11dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="5dp"
-        android:text="@string/id_titlu"
         android:gravity="center"
+        android:text="@string/id_titlu"
         app:layout_constraintBottom_toTopOf="@+id/id_inregistrare"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTip"
+        android:layout_width="187dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_inregistrare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_titlu">
+
+        <RadioButton
+            android:id="@+id/id_profilProf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/id_profilProf" />
+
+        <RadioButton
+            android:id="@+id/id_profilStud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/id_profilStud" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/profilMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/profilMain"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_titlu" />
 
 </android.support.constraint.ConstraintLayout>

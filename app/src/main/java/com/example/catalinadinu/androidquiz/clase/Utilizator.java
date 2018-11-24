@@ -7,15 +7,14 @@ public class Utilizator implements Serializable {
     private String prenume;
     private String email;
     private String parola;
-    private String tipUtilizator;
 
 
-    public Utilizator(String nume, String prenume, String email, String parola, String tipUtilizator) {
+
+    public Utilizator(String nume, String prenume, String email, String parola) {
         this.nume = nume;
         this.prenume = prenume;
         this.email = email;
         this.parola = parola;
-        this.tipUtilizator = tipUtilizator;
     }
 
 
@@ -29,8 +28,6 @@ public class Utilizator implements Serializable {
         sb.append(email);
         sb.append(", ");
         sb.append(parola);
-        sb.append(", ");
-        sb.append(tipUtilizator);
         return sb.toString();
     }
 }

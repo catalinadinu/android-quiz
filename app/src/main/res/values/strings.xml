@@ -17,4 +17,6 @@
     <string name="id_emailConectare">E-mail</string>
     <string name="id_parolaConectare">Parolă</string>
     <string name="id_butonConectare">Conectare</string>
+    <string name="id_codProf">Cod</string>
+    <string name="profilMain">Selectează profilul!</string>
 </resources>

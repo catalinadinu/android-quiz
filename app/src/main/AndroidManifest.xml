@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Inregistrare" />
-        <activity android:name=".Conectare"></activity>
+        <activity android:name=".InregistrareProfilStudent" />
+        <activity android:name=".Conectare" />
+        <activity android:name=".InregistrareProfilProfesor" />
+        <activity android:name=".ConectareStudent" />
+        <activity android:name=".ConectareProfesor"></activity>
     </application>
 
 </manifest>
