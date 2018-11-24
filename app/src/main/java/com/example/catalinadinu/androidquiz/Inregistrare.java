@@ -3,6 +3,7 @@ package com.example.catalinadinu.androidquiz;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -87,8 +88,11 @@ public class Inregistrare extends AppCompatActivity {
                 String radioValue = ((RadioButton)findViewById(radioGroupTip.getCheckedRadioButtonId())).getText().toString();
                 Utilizator utilizator = new Utilizator(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                         parola.getText().toString(), radioValue);
-                Toast.makeText(Inregistrare.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(Inregistrare.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.putExtra("util", utilizator);
+                setResult(RESULT_OK, intent);
+                finish();
             }
         }
     }

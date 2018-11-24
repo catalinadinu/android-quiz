@@ -13,4 +13,8 @@
     <string name="id_profilStud">Profil student</string>
     <string name="id_radioGrup"></string>
     <string name="id_butonInregistreaza">Creează cont</string>
+    <string name="id_titluConectare">Conectează-te!</string>
+    <string name="id_emailConectare">E-mail</string>
+    <string name="id_parolaConectare">Parolă</string>
+    <string name="id_butonConectare">Conectare</string>
 </resources>
