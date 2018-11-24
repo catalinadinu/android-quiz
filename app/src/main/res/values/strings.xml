@@ -11,5 +11,6 @@
     <string name="id_confirmParolaInreg">Confirmă parola</string>
     <string name="id_profilProf">Profil profesor</string>
     <string name="id_profilStud">Profil student</string>
+    <string name="id_radioGrup"></string>
     <string name="id_butonInregistreaza">Creează cont</string>
 </resources>
