@@ -17,14 +17,18 @@
     <string name="id_profilStud">Profil student</string>
     <string name="id_radioGrup"></string>
     <string name="id_butonInregistreaza">Creează cont</string>
-    <string name="id_titluConectare">Conectează-te!</string>
     <string name="id_butonInregistreazaStud">Creează cont</string>
     <string name="id_titluConectareStud">Conectează-te!</string>
-    <string name="id_emailConectare">E-mail</string>
-    <string name="id_parolaConectare">Parolă</string>
+    <string name="id_emailProfConectare">E-mail</string>
+    <string name="id_parolaProfConectare">Parolă</string>
     <string name="id_butonConectare">Conectare</string>
-    <string name="id_codProf">Cod</string>
+    <string name="id_codProfConectare">Cod</string>
     <string name="profilMain">Selectează profilul!</string>
     <string name="inregistrareProfilProf">Înregistrare profil profesor</string>
     <string name="inregistrarePrStud">Înregistrare profil student</string>
+    <string name="conectareProf">Conectare profil profesor</string>
+    <string name="id_mailConectareStud">E-mail</string>
+    <string name="id_parolaConectareStud">Parolă</string>
+    <string name="id_codConectareStud">Cod</string>
+    <string name="id_butonConectareStud">Conectare</string>
 </resources>
