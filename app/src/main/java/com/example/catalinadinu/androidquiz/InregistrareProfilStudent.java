@@ -21,6 +21,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private EditText prenume;
     private EditText email;
     private EditText parola;
+    private EditText confirmaParola;
     //private RadioGroup radioGroupTip;
     private Button creeazaCont;
 
@@ -30,23 +31,23 @@ public class InregistrareProfilStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inregistrare_profil_student);
 
-        //nume=findViewById(R.id.id_numeInregistrare);
-        //prenume=findViewById(R.id.id_prenumeInregistrare);
-        //email=findViewById(R.id.id_mailInregistrare);
-        //parola=findViewById(R.id.id_parolaInregistrare);
+        nume=findViewById(R.id.id_numeStudI);
+        prenume=findViewById(R.id.id_prenumeStudI);
+        email=findViewById(R.id.id_mailStudI);
+        parola=findViewById(R.id.id_parolaStudI);
+        confirmaParola=findViewById(R.id.id_confirmParolaStudI);
+        creeazaCont=findViewById(R.id.id_butonInregistreazaStud);
         //radioGroupTip = findViewById(R.id.id_radioGrup);
-        //creeazaCont=findViewById(R.id.buttonInregistrare);
 
     }
 
-
-    public void creeazaCont(View view)
+    public void creeazaContFunctie(View view)
     {
-        if(nume!=null && prenume!=null && email!=null && parola!=null)
+        if(nume!=null && prenume!=null && email!=null && parola!=null && confirmaParola != null)
         {
             if("".equals(nume.getText().toString()) || "".equals(prenume.getText().toString()) ||
                     "".equals(email.getText().toString()) || "".equals(parola.getText().toString()) ||
-                    "".equals(nume.getText().toString()))
+                    "".equals(confirmaParola.getText().toString()))
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Eroare");
@@ -69,7 +70,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-                        startActivityForResult(intentConectare, 2);
+                        startActivityForResult(intentConectare, 4);
                     }
                 });
             }
