@@ -38,4 +38,10 @@
     <string name="id_numeUtilizatorContS">Buna, ....</string>
     <string name="id_spinnerMaterieS"></string>
     <string name="id_boutonQuizNouS">Începe testul!</string>
+    <string name="contPersonalProf">Cont personal</string>
+    <string name="bunaProf">Buna, ...</string>
+    <string name="vizQuiz">Vizualizare test</string>
+    <string name="adQuiz">Adăugare test</string>
+    <string name="veziProgres">Vezi progres student</string>
+    <string name="feedback">Oferă feedback</string>
 </resources>
