@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".InregistrareProfilStudent" />
-        <activity android:name=".Conectare" />
         <activity android:name=".InregistrareProfilProfesor" />
         <activity android:name=".ConectareStudent" />
         <activity android:name=".ConectareProfesor"></activity>

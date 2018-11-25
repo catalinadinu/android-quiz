@@ -9,8 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.catalinadinu.androidquiz.clase.Utilizator;
+import com.example.catalinadinu.androidquiz.clase.UtilizatorProfesor;
 
 public class InregistrareProfilProfesor extends AppCompatActivity {
     private EditText nume;
@@ -19,6 +20,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     private EditText parola;
     private EditText confirmaParola;
     private Button creeazaCont;
+    public UtilizatorProfesor utilProf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,14 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
             }
             else
             {
-                Utilizator utilizator = new Utilizator(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
-                        parola.getText().toString());
+                if(confirmaParola.equals(parola)){
+                    utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
+                            parola.getText().toString(), confirmaParola.getText().toString());
+                    //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
+                }
 
                 creeazaCont.setOnClickListener(new View.OnClickListener() {
                     @Override

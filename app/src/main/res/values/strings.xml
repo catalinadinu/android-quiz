@@ -27,6 +27,7 @@
     <string name="inregistrareProfilProf">Înregistrare profil profesor</string>
     <string name="inregistrarePrStud">Înregistrare profil student</string>
     <string name="conectareProf">Conectare profil profesor</string>
+    <string name="conectareStud">Conectare profil student</string>
     <string name="id_mailConectareStud">E-mail</string>
     <string name="id_parolaConectareStud">Parolă</string>
     <string name="id_codConectareStud">Cod</string>

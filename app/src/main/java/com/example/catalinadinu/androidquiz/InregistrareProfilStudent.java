@@ -8,12 +8,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.view.View;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.catalinadinu.androidquiz.clase.Utilizator;
+import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
 
 public class InregistrareProfilStudent extends AppCompatActivity {
 
@@ -24,6 +22,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private EditText confirmaParola;
     //private RadioGroup radioGroupTip;
     private Button creeazaCont;
+    public UtilizatorStudent utilStud;
 
 
     @Override
@@ -59,8 +58,16 @@ public class InregistrareProfilStudent extends AppCompatActivity {
             else
             {
                 //String radioValue = ((RadioButton)findViewById(radioGroupTip.getCheckedRadioButtonId())).getText().toString();
-                Utilizator utilizator = new Utilizator(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
-                        parola.getText().toString());
+                //UtilizatorStudent utilizator= new UtilizatorStudent();
+                if(confirmaParola.equals(parola)){
+                    utilStud = new UtilizatorStudent(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
+                            parola.getText().toString(), confirmaParola.getText().toString());
+                    //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(InregistrareProfilStudent.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
+                }
+
                 //Toast.makeText(Inregistrare.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
 //                Intent intent = new Intent();
 //                intent.putExtra("util", utilizator);
