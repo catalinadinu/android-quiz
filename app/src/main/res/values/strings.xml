@@ -32,4 +32,10 @@
     <string name="id_parolaConectareStud">Parolă</string>
     <string name="id_codConectareStud">Cod</string>
     <string name="id_butonConectareStud">Conectare</string>
+    <string name="contPersonal">Cont personal</string>
+    <string name="quizuriParcurse">Teste parcurse:</string>
+    <string name="alegeMaterieQuizNou">Alege o materie pentru a parcurge un test nou:</string>
+    <string name="id_numeUtilizatorContS">Buna, ....</string>
+    <string name="id_spinnerMaterieS"></string>
+    <string name="id_boutonQuizNouS">Începe testul!</string>
 </resources>

@@ -19,7 +19,8 @@
         <activity android:name=".InregistrareProfilStudent" />
         <activity android:name=".InregistrareProfilProfesor" />
         <activity android:name=".ConectareStudent" />
-        <activity android:name=".ConectareProfesor"></activity>
+        <activity android:name=".ConectareProfesor" />
+        <activity android:name=".ContStudent"></activity>
     </application>
 
 </manifest>
