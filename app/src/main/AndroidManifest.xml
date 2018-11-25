@@ -20,7 +20,9 @@
         <activity android:name=".InregistrareProfilProfesor" />
         <activity android:name=".ConectareStudent" />
         <activity android:name=".ConectareProfesor" />
-        <activity android:name=".ContStudent"></activity>
+        <activity android:name=".ContStudent" />
+        <activity android:name=".Materie1Stud" />
+        <activity android:name=".Materie2Stud"></activity>
     </application>
 
 </manifest>
