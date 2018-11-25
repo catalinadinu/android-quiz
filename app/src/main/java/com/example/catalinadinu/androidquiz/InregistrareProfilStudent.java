@@ -41,7 +41,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 
     }
 
-    public void creeazaContFunctie(View view)
+    public void creeazaContStudent(View view)
     {
         if(nume!=null && prenume!=null && email!=null && parola!=null && confirmaParola != null)
         {
@@ -51,7 +51,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Eroare");
-                builder.setMessage("Toate campurile sunt obligatorii!");
+                builder.setMessage("Toate câmpurile sunt obligatorii!");
                 builder.setPositiveButton("OK", null);
                 AlertDialog dialog = builder.create();
                 dialog.show();
