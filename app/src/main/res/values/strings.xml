@@ -47,4 +47,10 @@
     <string name="listaQuizProf"></string>
     <string name="titluIntroducereCod">Pentru a vizualiza progresul studentului, introduceți codul!</string>
     <string name="hintIntroducereCod">Cod student</string>
+    <string name="progresTitlu">Progres student</string>
+    <string name="gridViewProgresStudent"></string>
+    <string name="inapoiContProf"></string>
+    <string name = "backContProfFdb"></string>
+    <string name="listaStudentiFdb"></string>
+    <string name="searchViewStudentFdb"></string>
 </resources>

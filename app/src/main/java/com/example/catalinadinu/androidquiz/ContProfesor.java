@@ -12,33 +12,32 @@ import android.widget.ListView;
 
 public class ContProfesor extends AppCompatActivity {
 
-
     private Button adQuiz;
     private Button progres;
     private Button feedbackk;
     private ListView listaQuiz;
     //asta e la plezneala sa vedem daca merge, inlocuim pe urma cu un ArrayList
-    String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"};
+    //String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_profesor);
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,
-                R.layout.activity_cont_profesor, listaNumeQuiz);
+        //ArrayAdapter adapter = new ArrayAdapter<String>(this,
+          //      R.layout.activity_cont_profesor, listaNumeQuiz);
 
         adQuiz = findViewById(R.id.adQuiz);
         progres = findViewById(R.id.veziProgres);
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
-        listaQuiz.setAdapter(adapter);
+        //listaQuiz.setAdapter(adapter);
 
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ContProfesor.this, VizualizareTest.class);
-                startActivityForResult(intent, 7);
+                startActivityForResult(intent, 9);
             }
         });
     }
@@ -50,7 +49,7 @@ public class ContProfesor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentAd = new Intent(ContProfesor.this, AdaugareTest.class);
-                startActivityForResult(intentAd, 5);
+                startActivityForResult(intentAd, 7);
             }
         });
     }
@@ -60,7 +59,7 @@ public class ContProfesor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
-                startActivityForResult(intentProgres, 5);
+                startActivityForResult(intentProgres, 11);
             }
         });
     }
@@ -70,7 +69,7 @@ public class ContProfesor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentFeedback = new Intent(ContProfesor.this, FormularFeedback.class);
-                startActivityForResult(intentFeedback, 5);
+                startActivityForResult(intentFeedback, 10);
             }
         });
     }

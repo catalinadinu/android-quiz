@@ -35,6 +35,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         creeazaCont=findViewById(R.id.id_butonInregistreaza);
     }
 
+
     public void creeazaContProfesor(View view)
     {
         if(nume!=null && prenume!= null && email!= null && parola!=null && confirmaParola!= null)

@@ -25,7 +25,6 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private UtilizatorStudent utilStud;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +40,16 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 
     }
 
+
 //    public void validareEmail() {
 //        if (!(emailValue.matches(emailPattern))) {
 //            Toast.makeText(getApplicationContext(), "Email invalid!", Toast.LENGTH_SHORT).show();
 //        }
 //    }
 
-        public void creeazaContStudent (View view)
-        {
+
+    public void creeazaContStudent(View view) {
+        if (nume != null && prenume != null && email != null && parola != null && confirmaParola != null) {
             String emailValue = email.getText().toString().trim();
             String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
@@ -70,10 +71,11 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-                           startActivityForResult(intentConectare, 4);                 }
-                 });
-                } else if (!(confirmaParola.equals(parola)) || !(emailValue.matches(emailPattern))){
-                    Toast.makeText(InregistrareProfilStudent.this, "Email-ul nu e introdus corect sau parola nu coincide!", Toast.LENGTH_SHORT).show();
+                            startActivityForResult(intentConectare, 4);
+                        }
+                    });
+                } //else if (!(confirmaParola.equals(parola)) || !(emailValue.matches(emailPattern))) {
+                  //  Toast.makeText(InregistrareProfilStudent.this, "Email-ul nu e introdus corect sau parola nu coincide!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -90,8 +92,6 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 //                }
 
 
-
-
             creeazaCont.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -100,8 +100,8 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                 }
             });
         }
-    }
 
+}
 
 
 

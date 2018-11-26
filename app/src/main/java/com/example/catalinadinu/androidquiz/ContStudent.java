@@ -39,12 +39,14 @@ public class ContStudent extends Activity {
 
         List<String> materii = new ArrayList<>();
         materii.add("BTI");
-        materii.add("POO");
+        //materii.add("POO");
 
         ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
         spinnerMaterie.setAdapter(adaptor);
 
     }
+
+    //functie care preia numele utilizatorului cu care va fi populat textview-ul de sub 'Cont Personal'
 
     public void IncepeTest(View view)
     {
@@ -53,13 +55,13 @@ public class ContStudent extends Activity {
             public void onClick(View v) {
                 String valoareSpinner = spinnerMaterie.getSelectedItem().toString();
                 if(valoareSpinner.equals("BTI")){
-                    Intent intentIncepeTest = new Intent(ContStudent.this, Materie1Stud.class);
-                    startActivityForResult(intentIncepeTest, 6);}
-                    else
-                {
-                    Intent intentIncepeTest = new Intent(ContStudent.this, Materie2Stud.class);
-                    startActivityForResult(intentIncepeTest, 7);
-                }
+                    Intent intentIncepeTest = new Intent(ContStudent.this, TestStudent.class);
+                    startActivityForResult(intentIncepeTest, 7);}
+//                    else
+//                {
+//                    Intent intentIncepeTest = new Intent(ContStudent.this, Materie2Stud.class);
+//                    startActivityForResult(intentIncepeTest, 7);
+//                }
             }
         });
     }

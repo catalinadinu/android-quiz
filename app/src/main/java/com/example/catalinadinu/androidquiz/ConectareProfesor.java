@@ -44,12 +44,12 @@ public class ConectareProfesor extends Activity {
                 AlertDialog dialog = builder.create();
                 dialog.show();
             } else {
-                if (emailValue.matches(emailPattern)) {
+               // if (emailValue.matches(emailPattern)) {
                     utilProf = new UtilizatorProfesor(email.getText().toString(),
                             parola.getText().toString(), cod.getText().toString());
                     //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(ConectareProfesor.this, "Email invalid!", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(ConectareProfesor.this, "Email invalid!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -62,5 +62,5 @@ public class ConectareProfesor extends Activity {
                 }
             });
         }
-    }
+
 }

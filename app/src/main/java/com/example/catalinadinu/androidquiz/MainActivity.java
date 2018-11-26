@@ -11,6 +11,18 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
 
+    //1 - inregistrare profesor
+    //2 - inregistrare student
+    //3 - conectrare profesor
+    //4 - conectare student
+    //5 - cont profesor
+    //6 - cont student
+    //7 - adaugare teste
+    //8 - test student
+    //9 - vizualizare test
+    //10 - feedback prof
+    //11 - progres
+
     private Button inregistrare;
     private Button conectare;
     private RadioGroup radioGroupTip;
