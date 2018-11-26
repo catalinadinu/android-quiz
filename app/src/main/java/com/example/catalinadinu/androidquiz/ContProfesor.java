@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class ContProfesor extends Activity {
 
-    private Button vizTest;
+
     private Button adQuiz;
     private Button progres;
     private Button feedbackk;
@@ -18,21 +18,12 @@ public class ContProfesor extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_profesor);
 
-        vizTest = findViewById(R.id.vizQuiz);
         adQuiz = findViewById(R.id.adQuiz);
        progres = findViewById(R.id.veziProgres);
        feedbackk = findViewById(R.id.feedback);
     }
 
-    public void vizualizareTest(View view){
-        vizTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentViz = new Intent(ContProfesor.this, VizualizareTest.class);
-                startActivityForResult(intentViz, 5);
-            }
-        });
-    }
+
 
     public void adaugareTest(View view){
         adQuiz.setOnClickListener(new View.OnClickListener() {
