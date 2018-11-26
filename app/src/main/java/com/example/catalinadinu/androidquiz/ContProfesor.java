@@ -31,21 +31,16 @@ public class ContProfesor extends AppCompatActivity {
         adQuiz = findViewById(R.id.adQuiz);
         progres = findViewById(R.id.veziProgres);
         feedbackk = findViewById(R.id.feedback);
-        listaQuiz = (ListView)findViewById(R.id.listaQuizProf);
+        listaQuiz = findViewById(R.id.listaQuizProf);
         listaQuiz.setAdapter(adapter);
 
-//        listaQuiz.setOnItemClickListener();
-
-//        list.setOnItemClickListener(new AdapterView.onItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-//                Intent appInfo = new Intent(YourActivity.this, ApkInfoActivity.class);
-//                startActivity(appInfo);
-//            }
-//        });
-
-//        ListView listView = (ListView) findViewById(R.id.mobile_list);
-//        listView.setAdapter(adapter);
+        listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ContProfesor.this, VizualizareTest.class);
+                startActivityForResult(intent, 7);
+            }
+        });
     }
 
 

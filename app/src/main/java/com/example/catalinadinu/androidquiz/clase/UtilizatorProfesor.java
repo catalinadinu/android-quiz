@@ -9,6 +9,7 @@ public class UtilizatorProfesor implements Serializable {
     private String email;
     private String parola;
     private String confirmaParola;
+    private String cod;
 
 
 
@@ -20,6 +21,11 @@ public class UtilizatorProfesor implements Serializable {
         this.confirmaParola=confirmaParola;
     }
 
+    public UtilizatorProfesor(String email, String parola, String cod) {
+        this.email = email;
+        this.parola = parola;
+        this.cod = cod;
+    }
 
     @Override
     public String toString() {

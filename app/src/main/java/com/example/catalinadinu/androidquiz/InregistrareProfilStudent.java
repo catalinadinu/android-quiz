@@ -22,7 +22,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private EditText confirmaParola;
     //private RadioGroup radioGroupTip;
     private Button creeazaCont;
-    public UtilizatorStudent utilStud;
+    private UtilizatorStudent utilStud;
 
 
 
