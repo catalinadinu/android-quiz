@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     //1 - inregistrare profesor
     //2 - inregistrare student
-    //3 - conectrare profesor
+    //3 - conectrare profesor>
     //4 - conectare student
     //5 - cont profesor
     //6 - cont student
@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     //10 - feedback prof
     //11 - progres
     //12 - final test
+    //13 - feedback aplicatie
+    //14 - contact
+    //15 - informatii aplicatie
 
     private Button inregistrare;
     private Button conectare;
@@ -104,4 +107,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+//    public void feedbackAplicatie(View view)
+//    {
+//        Intent intent = new Intent(MainActivity.this, FeedbackAplicatie.class);
+//        startActivityForResult(intent, 13);
+//    }
 }
