@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroupTip;
     private RadioButton profilProfesor;
     private RadioButton profilStudent;
+    private ImageButton info;
+    private ImageButton rateAplicatie;
+    private ImageButton contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         radioGroupTip = findViewById(R.id.radioGroupTip);
         profilProfesor = findViewById(R.id.id_profilProf);
         profilStudent = findViewById(R.id.id_profilStud);
+        info = findViewById(R.id.id_butonInfo);
+        rateAplicatie = findViewById(R.id.id_butonRate);
+        contact = findViewById(R.id.id_butonContact);
 
         inregistrare.setOnClickListener(new View.OnClickListener() {
             @Override
