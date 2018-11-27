@@ -114,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    public void feedbackAplicatie(View view)
-//    {
-//        Intent intent = new Intent(MainActivity.this, FeedbackAplicatie.class);
-//        startActivityForResult(intent, 13);
-//    }
+    public void feedbackAplicatie(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, FeedbackAplicatie.class);
+        startActivityForResult(intent, 13);
+    }
 }
