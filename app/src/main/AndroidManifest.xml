@@ -27,7 +27,9 @@
         <activity android:name=".Progres" />
         <activity android:name=".FormularFeedback" />
         <activity android:name=".TestStudent" />
-        <activity android:name=".FinalTest"></activity>
+        <activity android:name=".FinalTest" />
+        <activity android:name=".Info" />
+        <activity android:name=".FeedbackAplicatie"></activity>
     </application>
 
 </manifest>
