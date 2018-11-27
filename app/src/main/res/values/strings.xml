@@ -69,4 +69,8 @@
     <string name="dificultateTest">Dificultatea testului:</string>
     <string name="ratingBarDificultate"></string>
     <string name="butonSubmitFinalizareTest"></string>
+    <string name="TVfeedbackAplicatie">Oferă o notă aplicației,</string>
+    <string name="TVcomentariu">și, dacă vrei să ne transmiți ceva:</string>
+    <string name="TVms">Mulțumim! :)</string>
+    <string name="comentariuFeedbackAplicatie"></string>
 </resources>
