@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     //9 - vizualizare test
     //10 - feedback prof
     //11 - progres
+    //12 - final test
 
     private Button inregistrare;
     private Button conectare;

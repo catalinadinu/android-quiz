@@ -26,7 +26,8 @@
         <activity android:name=".AdaugareTest" />
         <activity android:name=".Progres" />
         <activity android:name=".FormularFeedback" />
-        <activity android:name=".TestStudent"></activity>
+        <activity android:name=".TestStudent" />
+        <activity android:name=".FinalTest"></activity>
     </application>
 
 </manifest>

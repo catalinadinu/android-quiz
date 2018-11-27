@@ -50,7 +50,23 @@
     <string name="progresTitlu">Progres student</string>
     <string name="gridViewProgresStudent"></string>
     <string name="inapoiContProf"></string>
-    <string name = "backContProfFdb"></string>
+    <string name="backContProfFdb"></string>
     <string name="listaStudentiFdb"></string>
     <string name="searchViewStudentFdb"></string>
+    <string name="adTestButton">Adaugă test!</string>
+    <string name="spinnerTipIntrebare">Alege tipul de întrebare</string>
+    <string name="TValegeTipIntrebare">Alege tipul întrebării</string>
+    <string name="intrebare1">Intrebare 1</string>
+    <string name="intrebare2">Intrebare 2</string>
+    <string name="intrebare3">Intrebare 3</string>
+    <string name="intrebare4">Intrebare 4</string>
+    <string name="intrebare5">Intrebare 5</string>
+    <string name="raspunsDeschis">Adaugă răspuns</string>
+    <string name="butonSubmit">Finalizează testul</string>
+    <string name="terminareTest">Ați finalizat testul!</string>
+    <string name="punctajFinalTest">Punctajul acumulat:</string>
+    <string name="nrRaspCorecteTest">Număr de răspunsuri corecte: n/M</string>
+    <string name="dificultateTest">Dificultatea testului:</string>
+    <string name="ratingBarDificultate"></string>
+    <string name="butonSubmitFinalizareTest"></string>
 </resources>
