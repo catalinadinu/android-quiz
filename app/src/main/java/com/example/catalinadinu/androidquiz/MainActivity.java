@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton rateAplicatie;
     private ImageButton contact;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         info = findViewById(R.id.id_butonInfo);
         rateAplicatie = findViewById(R.id.id_butonRate);
         contact = findViewById(R.id.id_butonContact);
+        info = findViewById(R.id.id_butonInfo);
 
         inregistrare.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,5 +120,18 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(MainActivity.this, FeedbackAplicatie.class);
         startActivityForResult(intent, 13);
+    }
+
+    public void informatii(View view)
+    {
+        Intent intentInfo = new Intent(MainActivity.this, Info.class);
+        startActivityForResult(intentInfo, 15);
+
+    }
+
+    public void contact(View view)
+    {
+        Intent intentContact = new Intent(MainActivity.this, Contact.class);
+        startActivityForResult(intentContact,14);
     }
 }
