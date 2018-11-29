@@ -9,12 +9,53 @@ public class UtilizatorStudent implements Serializable {
     private String parola;
     private String confirmaParola;
 
+
     public UtilizatorStudent(String nume, String prenume, String email, String parola, String confirmaParola) {
         this.nume = nume;
         this.prenume = prenume;
         this.email = email;
         this.parola = parola;
         this.confirmaParola=confirmaParola;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public void setPrenume(String prenume) {
+        this.prenume = prenume;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getParola() {
+        return parola;
+    }
+
+    public void setParola(String parola) {
+        this.parola = parola;
+    }
+
+    public String getConfirmaParola() {
+        return confirmaParola;
+    }
+
+    public void setConfirmaParola(String confirmaParola) {
+        this.confirmaParola = confirmaParola;
     }
 
     @Override
@@ -25,10 +66,10 @@ public class UtilizatorStudent implements Serializable {
         sb.append(prenume);
         sb.append(", ");
         sb.append(email);
-        sb.append(", ");
-        sb.append(parola);
-        sb.append(", ");
-        sb.append(confirmaParola);
+      //  sb.append(", ");
+//        sb.append(parola);
+//        sb.append(", ");
+//        sb.append(confirmaParola);
         return sb.toString();
     }
 }
