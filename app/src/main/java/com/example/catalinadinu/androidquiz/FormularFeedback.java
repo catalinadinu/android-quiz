@@ -33,11 +33,11 @@ public class FormularFeedback extends Activity {
 
         //facut pt adaptor personalizat
         UtilizatorStudent[] studenti = new UtilizatorStudent[]{
-                new UtilizatorStudent("Ana", "Popescu", "ana@gmail.com","aaa", "aaa"),
-                new UtilizatorStudent("Ion", "Popescu", "ion@gmail.com","bbb", "bbb"),
-                new UtilizatorStudent("Ioana", "Popa", "ioana@gmail.com","ccc", "ccc"),
-                new UtilizatorStudent("Robert", "Angelescu", "rob@gmail.com","ddd", "ddd"),
-                new UtilizatorStudent("Victor", "Anghel", "victor@gmail.com","eee", "eee")
+                new UtilizatorStudent("Popescu", "Ana", "ana@gmail.com", "A10"),
+                new UtilizatorStudent("Popescu", "Vlad", "ion@gmail.com","A11"),
+                new UtilizatorStudent("Popa", "Ioana", "ioana@gmail.com","A12"),
+                new UtilizatorStudent("Anghelescu", "Robert", "rob@gmail.com","A13"),
+                new UtilizatorStudent("Anghel", "Mihai", "victor@gmail.com","A14")
         };
 
         ArrayList<UtilizatorStudent> listaStudenti = new ArrayList<>();

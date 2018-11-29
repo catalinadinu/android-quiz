@@ -33,11 +33,13 @@ public class StudentiAdaptorPersonalizat extends ArrayAdapter<UtilizatorStudent>
 
         TextView nume = convertView.findViewById(R.id.nume);
         TextView prenume = convertView.findViewById(R.id.prenume);
+        TextView cod = convertView.findViewById(R.id.cod);
 
         UtilizatorStudent student = getItem(position);
 
         nume.setText(student.getNume());
         prenume.setText(student.getPrenume());
+        cod.setText(student.getCodStudent());
 
         return convertView;
     }

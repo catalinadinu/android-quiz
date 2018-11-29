@@ -8,7 +8,22 @@ public class UtilizatorStudent implements Serializable {
     private String email;
     private String parola;
     private String confirmaParola;
+    private String codStudent;
 
+    public String getCodStudent() {
+        return codStudent;
+    }
+
+    public UtilizatorStudent(String nume, String prenume, String email, String codStudent) {
+        this.nume = nume;
+        this.prenume = prenume;
+        this.email = email;
+        this.codStudent = codStudent;
+    }
+
+    public void setCodStudent(String codStudent) {
+        this.codStudent = codStudent;
+    }
 
     public UtilizatorStudent(String nume, String prenume, String email, String parola, String confirmaParola) {
         this.nume = nume;
