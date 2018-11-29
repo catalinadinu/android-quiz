@@ -56,19 +56,21 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                 if(confirmaParola.equals(parola)){
                     utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
-                    //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
+
+                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
+                    startActivityForResult(intentConectare, 3);
                 }
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
                 }
 
-                creeazaCont.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
-                        startActivityForResult(intentConectare, 3);
-                    }
-                });
+//                creeazaCont.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
+//                        startActivityForResult(intentConectare, 3);
+//                    }
+//                });
             }
         }
     }

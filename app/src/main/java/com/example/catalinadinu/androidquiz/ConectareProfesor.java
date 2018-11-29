@@ -50,17 +50,20 @@ public class ConectareProfesor extends Activity {
                     //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
 //                } else {
 //                    Toast.makeText(ConectareProfesor.this, "Email invalid!", Toast.LENGTH_SHORT).show();
+                Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
+                startActivityForResult(intentConectareProf, 5);
+
                 }
 
             }
 
-            conectareProf.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
-                    startActivityForResult(intentConectareProf, 5);
-                }
-            });
+//            conectareProf.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
+//                    startActivityForResult(intentConectareProf, 5);
+//                }
+//            });
         }
 
 }

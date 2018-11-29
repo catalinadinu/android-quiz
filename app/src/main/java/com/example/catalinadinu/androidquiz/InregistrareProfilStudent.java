@@ -63,20 +63,16 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                     builder.setPositiveButton("OK", null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
-                } else if ((confirmaParola.equals(parola)) && (emailValue.matches(emailPattern))) {
+                } else if ((confirmaParola.equals(parola))) { //&& (emailValue.matches(emailPattern))) {
                     utilStud = new UtilizatorStudent(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
-
-                    creeazaCont.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-                            startActivityForResult(intentConectare, 4);
-                        }
-                    });
-                } //else if (!(confirmaParola.equals(parola)) || !(emailValue.matches(emailPattern))) {
-                  //  Toast.makeText(InregistrareProfilStudent.this, "Email-ul nu e introdus corect sau parola nu coincide!", Toast.LENGTH_SHORT).show();
+                    Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
+                    startActivityForResult(intentConectare, 4);
                 }
+            }
+                 //else if (!(confirmaParola.equals(parola)) || !(emailValue.matches(emailPattern))) {
+                  //  Toast.makeText(InregistrareProfilStudent.this, "Email-ul nu e introdus corect sau parola nu coincide!", Toast.LENGTH_SHORT).show();
+
 
             }
 
@@ -92,13 +88,13 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 //                }
 
 
-            creeazaCont.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-                    startActivityForResult(intentConectare, 4);
-                }
-            });
+//            creeazaCont.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
+//                    startActivityForResult(intentConectare, 4);
+//                }
+//            });
         }
 
 }
