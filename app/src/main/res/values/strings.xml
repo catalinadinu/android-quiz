@@ -74,4 +74,9 @@
     <string name="TVms">Mulțumim! :)</string>
     <string name="comentariuFeedbackAplicatie"></string>
     <string name="TVinfo"></string>
+    <string name="denumireAplicatie">Mica Felină</string>
+    <string name="TVDescriere">Aplicație interactivă destinată creării și susținerii de teste în mediul universitar.
+        Aplicația se adresează atât profesorilor, permițând crearea și partajarea de teste, cât și studenților, aceștia fiind
+        evaluați într-o manieră inedită.
+    </string>
 </resources>
