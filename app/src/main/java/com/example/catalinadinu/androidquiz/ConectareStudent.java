@@ -43,7 +43,7 @@ public class ConectareStudent extends Activity {
                 utilizatorStudent = new UtilizatorStudent(email.getText().toString(),
                         parola.getText().toString(), cod.getText().toString());
                 Intent intentConectareStud = new Intent(ConectareStudent.this, ContStudent.class);
-                startActivityForResult(intentConectareStud, 5);
+                startActivityForResult(intentConectareStud, 6);
             }
 
         }
