@@ -14,12 +14,14 @@ import android.widget.TextView;
 public class ContProfesor extends AppCompatActivity {
 
     private TextView numeUtilizator;
+    private TextView codProfesor;
     private Button adQuiz;
     private Button progres;
     private Button feedbackk;
     private ListView listaQuiz;
-    //String prenumeProf;
-    //String numeProf;
+    String prenumeProf;
+//    String numeProf;
+    String codproff;
     //asta e la plezneala sa vedem daca merge, inlocuim pe urma cu un ArrayList
     //String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"}; //aici cred ca trebuie clasa facuta pt quiz
 
@@ -29,15 +31,23 @@ public class ContProfesor extends AppCompatActivity {
         setContentView(R.layout.activity_cont_profesor);
 
         numeUtilizator = findViewById(R.id.textViewNumeContPersonal);
+        codProfesor = findViewById(R.id.textViewCodCont);
         adQuiz = findViewById(R.id.adQuiz);
         progres = findViewById(R.id.veziProgres);
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
 
         //transfer
-//        prenumeProf = getIntent().getExtras().getString("Prenume");
-//        numeProf = getIntent().getExtras().getString("Nume");
-//        numeUtilizator.setText(prenumeProf + " " + numeProf);
+        if(getIntent().hasExtra("COD")){
+            codproff = getIntent().getExtras().getString("COD");
+            codProfesor.setText(codproff);
+        }
+        else if (getIntent().hasExtra("PRENUME")){
+            prenumeProf = getIntent().getExtras().getString("PRENUME");
+            //numeProf = getIntent().getExtras().getString("NUME");
+            numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
+        }
+
 
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -47,7 +57,6 @@ public class ContProfesor extends AppCompatActivity {
             }
         });
     }
-
 
 
     public void adaugareTest(View view){

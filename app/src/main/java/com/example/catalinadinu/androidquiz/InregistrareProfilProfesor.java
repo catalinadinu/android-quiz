@@ -36,16 +36,16 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         creeazaCont=findViewById(R.id.id_butonInregistreaza);
     }
 
-//    public void trimiteNume() {
-//        //intent implicit pentru a transfera parametrii
-//        String last = nume.getText().toString();
-//        String first = prenume.getText().toString();
-//
-//        Intent intent = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
-//        intent.putExtra("PRENUME", first);
-//        //intent.putExtra("NUME", last);
-//        startActivity(intent);
-//    }
+    public void trimiteNume() {
+        //intent implicit pentru a transfera parametrii
+        //String last = nume.getText().toString();
+        String first = prenume.getText().toString();
+
+        Intent intent = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+        intent.putExtra("PRENUME", first);
+        //intent.putExtra("NUME", last);
+        startActivity(intent);
+    }
 
 
         public void creeazaContProfesor(View view)
@@ -68,9 +68,10 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                     utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
 
-                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
-                    startActivityForResult(intentConectare, 3);
-                    //trimiteNume();
+                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+                    startActivityForResult(intentConectare, 5);
+                    //apel functie transfer obiect
+                    trimiteNume();
                 }
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();

@@ -42,18 +42,24 @@ public class ConectareProfesor extends Activity {
 //        Log.d(lastName.toString(), "plmmmmmmm2");
     }
 
-//    public void trimiteNumeCont(){
+    public void trimiteNumeCont(){
 //
 //        Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
 //        intent.putExtra("Nume", lastName);
 //        intent.putExtra("Prenume", firstName);
 //        startActivity(intent);
-//    }
+
+        String codProf = cod.getText().toString();
+
+        Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
+        intent.putExtra("COD", codProf);
+        startActivity(intent);
+    }
 
     public void conectareProfesor(View view) {
         //String emailValue = email.getText().toString().trim();
         //String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        //trimiteNumeCont();
+
         if (email != null && parola != null && cod != null) {
             if ("".equals(cod.getText().toString()) ||
                     "".equals(email.getText().toString()) || "".equals(parola.getText().toString())) {
@@ -73,7 +79,7 @@ public class ConectareProfesor extends Activity {
                 Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
                 startActivityForResult(intentConectareProf, 5);
 
-                //trimiteNumeCont();
+                trimiteNumeCont();
                 //Log.d("te rog", "ma pis pe tine");
             }
 

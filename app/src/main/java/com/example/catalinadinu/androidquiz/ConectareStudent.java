@@ -29,6 +29,20 @@ public class ConectareStudent extends Activity {
         conectareStud = findViewById(R.id.id_butonConectareStud);
     }
 
+    public void trimiteNumeCont(){
+//
+//        Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
+//        intent.putExtra("Nume", lastName);
+//        intent.putExtra("Prenume", firstName);
+//        startActivity(intent);
+
+        String codStud = cod.getText().toString();
+
+        Intent intent = new Intent(ConectareStudent.this, ContStudent.class);
+        intent.putExtra("COD", codStud);
+        startActivity(intent);
+    }
+
     public void conectareStudent(View view){
         if(email != null && parola != null && cod != null){
             if("".equals(email.getText().toString()) || "".equals(parola.getText().toString()) || "".equals(cod.getText().toString())){
@@ -44,6 +58,7 @@ public class ConectareStudent extends Activity {
                         parola.getText().toString(), cod.getText().toString());
                 Intent intentConectareStud = new Intent(ConectareStudent.this, ContStudent.class);
                 startActivityForResult(intentConectareStud, 6);
+                trimiteNumeCont();
             }
 
         }
