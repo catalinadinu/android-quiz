@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ public class ConectareProfesor extends Activity {
     private TextView cod;
     private Button conectareProf;
     private UtilizatorProfesor utilProf;
+    //String firstName;
+    //String lastName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +31,29 @@ public class ConectareProfesor extends Activity {
         parola =  findViewById(R.id.id_parolaProfConectare);
         cod = findViewById(R.id.id_codProfConectare);
         conectareProf = findViewById(R.id.id_butonConectare);
+
+
+//        if(getIntent() !=null){
+//            firstName = getIntent().getExtras().getString("PRENUME");
+//            lastName = getIntent().getExtras().getString("NUME");
+//
+//        }
+//        Log.d(firstName.toString(), "plmmmmmmm");
+//        Log.d(lastName.toString(), "plmmmmmmm2");
     }
 
-    public void conectareProfesor(View view) {
-        String emailValue = email.getText().toString().trim();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+//    public void trimiteNumeCont(){
+//
+//        Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
+//        intent.putExtra("Nume", lastName);
+//        intent.putExtra("Prenume", firstName);
+//        startActivity(intent);
+//    }
 
+    public void conectareProfesor(View view) {
+        //String emailValue = email.getText().toString().trim();
+        //String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        //trimiteNumeCont();
         if (email != null && parola != null && cod != null) {
             if ("".equals(cod.getText().toString()) ||
                     "".equals(email.getText().toString()) || "".equals(parola.getText().toString())) {
@@ -53,17 +73,11 @@ public class ConectareProfesor extends Activity {
                 Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
                 startActivityForResult(intentConectareProf, 5);
 
-                }
-
+                //trimiteNumeCont();
+                //Log.d("te rog", "ma pis pe tine");
             }
 
-//            conectareProf.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
-//                    startActivityForResult(intentConectareProf, 5);
-//                }
-//            });
+            }
+        //
         }
-
 }

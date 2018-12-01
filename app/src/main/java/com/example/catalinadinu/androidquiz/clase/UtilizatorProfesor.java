@@ -11,8 +11,6 @@ public class UtilizatorProfesor implements Serializable {
     private String confirmaParola;
     private String cod;
 
-
-
     public UtilizatorProfesor(String nume, String prenume, String email, String parola, String confirmaParola) {
         this.nume = nume;
         this.prenume = prenume;
