@@ -9,29 +9,45 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ContProfesor extends AppCompatActivity {
 
+    private TextView numeUtilizator;
+    private TextView codProfesor;
     private Button adQuiz;
     private Button progres;
     private Button feedbackk;
     private ListView listaQuiz;
+    String prenumeProf;
+//    String numeProf;
+    String codproff;
     //asta e la plezneala sa vedem daca merge, inlocuim pe urma cu un ArrayList
-    //String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"};
+    //String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"}; //aici cred ca trebuie clasa facuta pt quiz
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_profesor);
 
-        //ArrayAdapter adapter = new ArrayAdapter<String>(this,
-          //      R.layout.activity_cont_profesor, listaNumeQuiz);
-
+        numeUtilizator = findViewById(R.id.textViewNumeContPersonal);
+        codProfesor = findViewById(R.id.textViewCodCont);
         adQuiz = findViewById(R.id.adQuiz);
         progres = findViewById(R.id.veziProgres);
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
-        //listaQuiz.setAdapter(adapter);
+
+        //transfer
+        if(getIntent().hasExtra("COD")){
+            codproff = getIntent().getExtras().getString("COD");
+            codProfesor.setText(codproff);
+        }
+        else if (getIntent().hasExtra("PRENUME")){
+            prenumeProf = getIntent().getExtras().getString("PRENUME");
+            //numeProf = getIntent().getExtras().getString("NUME");
+            numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
+        }
+
 
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -43,35 +59,19 @@ public class ContProfesor extends AppCompatActivity {
     }
 
 
-
     public void adaugareTest(View view){
-        adQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentAd = new Intent(ContProfesor.this, AdaugareTest.class);
-                startActivityForResult(intentAd, 7);
-            }
-        });
+        Intent intentAd = new Intent(ContProfesor.this, AdaugareTest.class);
+        startActivityForResult(intentAd, 7);
     }
 
     public void VeziProgres(View view){
-        progres.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
-                startActivityForResult(intentProgres, 11);
-            }
-        });
+        Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
+        startActivityForResult(intentProgres, 11);
     }
 
     public void FormFeedback(View view){
-        feedbackk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentFeedback = new Intent(ContProfesor.this, FormularFeedback.class);
-                startActivityForResult(intentFeedback, 10);
-            }
-        });
+        Intent intentFeedback = new Intent(ContProfesor.this, FormularFeedback.class);
+        startActivityForResult(intentFeedback, 10);
     }
 
 

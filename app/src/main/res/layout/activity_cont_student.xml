@@ -44,13 +44,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
         android:text="@string/quizuriParcurse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumeContPersonalStud" />
 
     <TextView
         android:id="@+id/alegeMaterieQuizNou"
@@ -93,15 +93,27 @@
         app:layout_constraintTop_toBottomOf="@+id/id_spinnerMaterieS" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textViewNumeContPersonalStud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/id_numeUtilizatorContS"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contPersonal" />
+
+    <TextView
+        android:id="@+id/textViewCodContStud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/quizuriParcurse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNumeContPersonalStud" />
 </android.support.constraint.ConstraintLayout>
 <!--</ScrollView>-->

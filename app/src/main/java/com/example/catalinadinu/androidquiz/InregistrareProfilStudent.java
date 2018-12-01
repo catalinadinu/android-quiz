@@ -47,11 +47,22 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 //        }
 //    }
 
+    public void trimiteNume() {
+        //intent implicit pentru a transfera parametrii
+        //String last = nume.getText().toString();
+        String first = prenume.getText().toString();
+
+        Intent intent = new Intent(InregistrareProfilStudent.this, ContStudent.class);
+        intent.putExtra("PRENUME", first);
+        //intent.putExtra("NUME", last);
+        startActivity(intent);
+    }
+
 
     public void creeazaContStudent(View view) {
         if (nume != null && prenume != null && email != null && parola != null && confirmaParola != null) {
-            String emailValue = email.getText().toString().trim();
-            String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+            //String emailValue = email.getText().toString().trim();
+            //String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
             if (nume != null && prenume != null && email != null && parola != null && confirmaParola != null) {
                 if ("".equals(nume.getText().toString()) || "".equals(prenume.getText().toString()) ||
@@ -63,11 +74,17 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                     builder.setPositiveButton("OK", null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
-                } else if ((confirmaParola.equals(parola))) { //&& (emailValue.matches(emailPattern))) {
-                    utilStud = new UtilizatorStudent(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
-                            parola.getText().toString(), confirmaParola.getText().toString());
-                    Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-                    startActivityForResult(intentConectare, 4);
+                } else {
+                    if (confirmaParola.getText().toString().equals(parola.getText().toString())) { //&& (emailValue.matches(emailPattern))) {
+                        utilStud = new UtilizatorStudent(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
+                                parola.getText().toString(), confirmaParola.getText().toString());
+                        Intent intentConectare = new Intent(InregistrareProfilStudent.this, ContStudent.class);
+                        startActivityForResult(intentConectare, 6);
+                        trimiteNume();
+                    }
+                    else{
+                        Toast.makeText(InregistrareProfilStudent.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
                  //else if (!(confirmaParola.equals(parola)) || !(emailValue.matches(emailPattern))) {

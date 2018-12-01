@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.icu.text.LocaleDisplayNames;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     private EditText parola;
     private EditText confirmaParola;
     private Button creeazaCont;
-    public UtilizatorProfesor utilProf;
+    private UtilizatorProfesor utilProf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +36,19 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         creeazaCont=findViewById(R.id.id_butonInregistreaza);
     }
 
+    public void trimiteNume() {
+        //intent implicit pentru a transfera parametrii
+        //String last = nume.getText().toString();
+        String first = prenume.getText().toString();
 
-    public void creeazaContProfesor(View view)
+        Intent intent = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+        intent.putExtra("PRENUME", first);
+        //intent.putExtra("NUME", last);
+        startActivity(intent);
+    }
+
+
+        public void creeazaContProfesor(View view)
     {
         if(nume!=null && prenume!= null && email!= null && parola!=null && confirmaParola!= null)
         {
@@ -51,26 +63,20 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                 AlertDialog dialog = builder.create();
                 dialog.show();
             }
-            else
-            {
-                if(confirmaParola.equals(parola)){
+            else  {
+                if(confirmaParola.getText().toString().equals(parola.getText().toString())){
                     utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
 
-                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
-                    startActivityForResult(intentConectare, 3);
+                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+                    startActivityForResult(intentConectare, 5);
+                    //apel functie transfer obiect
+                    trimiteNume();
                 }
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
                 }
-
-//                creeazaCont.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ConectareProfesor.class);
-//                        startActivityForResult(intentConectare, 3);
-//                    }
-//                });
+                //Log.d("l am trimis fmm", "plm");
             }
         }
     }
