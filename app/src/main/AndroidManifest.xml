@@ -30,7 +30,8 @@
         <activity android:name=".FinalTest" />
         <activity android:name=".Info" />
         <activity android:name=".FeedbackAplicatie" />
-        <activity android:name=".Contact"></activity>
+        <activity android:name=".Contact" />
+        <activity android:name=".PartajareCatre"></activity>
     </application>
 
 </manifest>

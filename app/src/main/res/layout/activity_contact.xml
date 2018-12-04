@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TVadresaContact" />
 
     <ImageButton
-        android:id="@+id/veziHarta"
+        android:id="@+id/deschideMaps"
         android:layout_width="39dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
