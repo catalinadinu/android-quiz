@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     //13 - feedback aplicatie
     //14 - contact
     //15 - informatii aplicatie
+    //16 - partajare catre
 
     private Button inregistrare;
     private Button conectare;

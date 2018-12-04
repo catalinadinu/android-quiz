@@ -78,4 +78,8 @@
     <string name="TVDescriere">Aplicație interactivă destinată creării și susținerii de teste în mediul universitar. Aplicația se adresează atât profesorilor, permițând crearea și partajarea de teste, cât și studenților, aceștia fiind
         evaluați într-o manieră inedită.
     </string>
+    <string name="TVtitluContact">Contactează-ne!</string>
+    <string name="TVmailContact">Mail: micafelina@gmail.com</string>
+    <string name="TVtelefonContact">Telefon: 0349 145 147</string>
+    <string name="TVadresaContact">Adresa: Calea Dorobanți nr. 15-17, Sector 1, București.</string>
 </resources>
