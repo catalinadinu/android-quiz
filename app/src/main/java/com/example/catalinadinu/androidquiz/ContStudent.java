@@ -77,8 +77,8 @@ public class ContStudent extends Activity {
         AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ContStudent.this, VizualizareTest.class);
-                startActivityForResult(intent, 9);
+                Intent intent = new Intent(ContStudent.this, TestStudent.class);
+                startActivityForResult(intent, 8);
             }
         };
 

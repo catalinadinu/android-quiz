@@ -69,6 +69,7 @@ public class ContProfesor extends AppCompatActivity {
         listaQuiz.setAdapter(adaptorPersonalizat);
 
 
+        //item selectat din listview
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
