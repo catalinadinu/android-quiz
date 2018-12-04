@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -69,6 +70,20 @@ public class ContStudent extends Activity {
 
         TesteAdaptorPersonalizat adaptorPersonalizat = new TesteAdaptorPersonalizat(this,android.R.layout.simple_list_item_1 ,listaTeste);
         listViewTesteStudent.setAdapter(adaptorPersonalizat);
+
+
+        //item selectat din listview
+        listViewTesteStudent.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
+        AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ContStudent.this, VizualizareTest.class);
+                startActivityForResult(intent, 9);
+            }
+        };
+
+        listViewTesteStudent.setOnItemClickListener(listClick);
+
 
 
         //transfer
