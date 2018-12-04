@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -47,6 +49,18 @@ public class FormularFeedback extends Activity {
 
         StudentiAdaptorPersonalizat adaptorPersonalizat = new StudentiAdaptorPersonalizat(this,android.R.layout.simple_list_item_1 ,listaStudenti);
         studentiFeedback.setAdapter(adaptorPersonalizat);
+
+        //item selectat din listview
+        studentiFeedback.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
+        AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(FormularFeedback.this,PopUpFeedback.class);
+                startActivityForResult(intent, 17);
+            }
+        };
+
+        studentiFeedback.setOnItemClickListener(listClick);
     }
 
 
