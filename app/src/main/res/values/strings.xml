@@ -84,4 +84,6 @@
     <string name="TVadresaContact">Adresa: Calea Dorobanți nr. 15-17, Sector 1, București.</string>
     <string name="buttonOferaFeedback">Oferă notă</string>
     <string name="TVpartajareCatre">Partajați testul către:</string>
+    <string name="parasesteContStudent">Părăsește contul</string>
+    <string name="parasesteContProfesor">Părăsește contul</string>
 </resources>
