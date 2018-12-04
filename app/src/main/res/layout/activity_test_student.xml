@@ -23,7 +23,7 @@
         android:text="@string/intrebare5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3Q4" />
 
     <TextView
         android:id="@+id/intrebare2"
@@ -35,7 +35,7 @@
         android:text="@string/intrebare2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupQ1" />
 
     <TextView
         android:id="@+id/intrebare4"
@@ -47,7 +47,7 @@
         android:text="@string/intrebare4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3Q3" />
 
     <TextView
         android:id="@+id/intrebare1"
@@ -72,10 +72,10 @@
         android:text="@string/intrebare3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupQ2" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupQ1"
         android:layout_width="317dp"
         android:layout_height="110dp"
         android:layout_marginStart="8dp"
@@ -87,21 +87,21 @@
         app:layout_constraintTop_toBottomOf="@+id/intrebare1">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButton1Q1"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton2Q1"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButton3Q1"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
@@ -109,7 +109,7 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroupQ2"
         android:layout_width="330dp"
         android:layout_height="110dp"
         android:layout_marginStart="8dp"
@@ -120,21 +120,21 @@
         app:layout_constraintTop_toBottomOf="@+id/intrebare2">
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/radioButton1Q2"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton11"
+            android:id="@+id/radioButton2Q2"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/radioButton3Q2"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_weight="1"
@@ -142,7 +142,7 @@
     </RadioGroup>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox1Q3"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -155,7 +155,7 @@
         app:layout_constraintTop_toBottomOf="@+id/intrebare3" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBox2Q3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -164,10 +164,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1Q3" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/checkBox3Q3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -176,10 +176,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2Q3" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/checkBox3Q4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -188,10 +188,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2Q4" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/checkBox1Q4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -204,7 +204,7 @@
         app:layout_constraintTop_toBottomOf="@+id/intrebare4" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/checkBox2Q4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -213,10 +213,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1Q4" />
 
     <EditText
-        android:id="@+id/raspunsDeschis"
+        android:id="@+id/raspunsDeschisQ5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -242,7 +242,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raspunsDeschis" />
+        app:layout_constraintTop_toBottomOf="@+id/raspunsDeschisQ5" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>

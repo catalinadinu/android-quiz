@@ -80,10 +80,9 @@ public class ConectareProfesor extends Activity {
                 startActivityForResult(intentConectareProf, 5);
 
                 trimiteNumeCont();
-                //Log.d("te rog", "ma pis pe tine");
             }
 
             }
-        //
+
         }
 }

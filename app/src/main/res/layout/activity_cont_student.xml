@@ -15,7 +15,7 @@
 
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listViewTesteStudent"
         android:layout_width="368dp"
         android:layout_height="129dp"
         android:layout_marginStart="8dp"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewTesteStudent" />
         <!--app:layout_constraintTop_toBottomOf="@+id/_dynamic" />-->
         <!--app:layout_constraintTop_toBottomOf="@+id/_dynamic" />-->
 

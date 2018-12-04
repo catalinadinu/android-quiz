@@ -20,7 +20,6 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private EditText email;
     private EditText parola;
     private EditText confirmaParola;
-    //private RadioGroup radioGroupTip;
     private Button creeazaCont;
     private UtilizatorStudent utilStud;
 
@@ -93,25 +92,6 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 
             }
 
-//                if (confirmaParola.equals(parola)) {
-////                    utilStud = new UtilizatorStudent(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
-////                            parola.getText().toString(), confirmaParola.getText().toString());
-//                    //Toast.makeText(InregistrareProfilStudent.this, utilizator.toString(), Toast.LENGTH_SHORT).show();
-//                } else {
-////                    Toast.makeText(InregistrareProfilStudent.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
-//                }
-//                if (!(emailValue.matches(emailPattern))) {
-//                    Toast.makeText(getApplicationContext(), "Email invalid!", Toast.LENGTH_SHORT).show();
-//                }
-
-
-//            creeazaCont.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intentConectare = new Intent(InregistrareProfilStudent.this, ConectareStudent.class);
-//                    startActivityForResult(intentConectare, 4);
-//                }
-//            });
         }
 
 }

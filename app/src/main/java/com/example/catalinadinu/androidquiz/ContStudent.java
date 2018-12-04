@@ -7,11 +7,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.catalinadinu.androidquiz.clase.StudentiAdaptorPersonalizat;
+import com.example.catalinadinu.androidquiz.clase.Test;
+import com.example.catalinadinu.androidquiz.clase.TesteAdaptorPersonalizat;
+import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ContStudent extends Activity {
@@ -20,6 +27,7 @@ public class ContStudent extends Activity {
     private Button incepeTest;
     private TextView numeStud;
     private TextView codStud;
+    private ListView listViewTesteStudent;
     String prenumestudd;
     //String numeProf;
     String codstudd;
@@ -33,6 +41,7 @@ public class ContStudent extends Activity {
         codStud = findViewById(R.id.textViewCodContStud);
         incepeTest = findViewById(R.id.id_boutonQuizNouS);
         spinnerMaterie = findViewById(R.id.id_spinnerMaterieS);
+        listViewTesteStudent = findViewById(R.id.listViewTesteStudent);
         spinnerMaterie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -46,6 +55,21 @@ public class ContStudent extends Activity {
 
             }
         });
+
+        //listview - adaptor personalizat
+        Test[] testeStudent = new Test[]{
+                new Test("Test POO", "5"),
+                new Test("Test JAVA", "5"),
+                new Test("Test DAM", "5"),
+                new Test("Test TEHNOLOGII WEB", "5")
+        };
+
+        ArrayList<Test> listaTeste = new ArrayList<>();
+        listaTeste.addAll(Arrays.asList(testeStudent));
+
+        TesteAdaptorPersonalizat adaptorPersonalizat = new TesteAdaptorPersonalizat(this,android.R.layout.simple_list_item_1 ,listaTeste);
+        listViewTesteStudent.setAdapter(adaptorPersonalizat);
+
 
         //transfer
         if(getIntent().hasExtra("COD")){
@@ -77,11 +101,6 @@ public class ContStudent extends Activity {
                 if(valoareSpinner.equals("BTI")){
                     Intent intentIncepeTest = new Intent(ContStudent.this, TestStudent.class);
                     startActivityForResult(intentIncepeTest, 7);}
-//                    else
-//                {
-//                    Intent intentIncepeTest = new Intent(ContStudent.this, Materie2Stud.class);
-//                    startActivityForResult(intentIncepeTest, 7);
-//                }
             }
         });
     }

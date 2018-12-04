@@ -62,13 +62,5 @@ public class ConectareStudent extends Activity {
             }
 
         }
-
-//        conectareStud.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentConectareStud = new Intent(ConectareStudent.this, ContStudent.class);
-//                startActivityForResult(intentConectareStud, 5);
-//            }
-//        });
     }
 }
