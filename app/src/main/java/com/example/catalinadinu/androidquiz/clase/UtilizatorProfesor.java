@@ -25,18 +25,23 @@ public class UtilizatorProfesor implements Serializable {
         this.cod = cod;
     }
 
+    public UtilizatorProfesor(String nume, String prenume) {
+        this.nume = nume;
+        this.prenume = prenume;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(nume);
-        sb.append(", ");
+        sb.append(" ");
         sb.append(prenume);
-        sb.append(", ");
-        sb.append(email);
-        sb.append(", ");
-        sb.append(parola);
-        sb.append(", ");
-        sb.append(confirmaParola);
+//        sb.append(", ");
+//        sb.append(email);
+//        sb.append(", ");
+//        sb.append(parola);
+//        sb.append(", ");
+//        sb.append(confirmaParola);
         return sb.toString();
     }
 }
