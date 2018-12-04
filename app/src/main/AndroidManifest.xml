@@ -32,9 +32,11 @@
         <activity android:name=".FeedbackAplicatie" />
         <activity android:name=".Contact" />
         <activity android:name=".PartajareCatre" />
-        <activity android:name=".PopUpFeedback"
-            android:theme="@style/AppTheme.CustomTheme"
-            ></activity>
+        <activity
+            android:name=".PopUpFeedback"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".setariContProfesor" />
+        <activity android:name=".setariContStudent"></activity>
     </application>
 
 </manifest>

@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,6 +30,7 @@ public class ContProfesor extends AppCompatActivity {
     private Button feedbackk;
     private ListView listaQuiz;
     private TextView hintIntroducereCod;
+    private ImageButton butonSetariContProfesor;
 
     String prenumeProf;
 //    String numeProf;
@@ -47,6 +50,7 @@ public class ContProfesor extends AppCompatActivity {
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
         hintIntroducereCod = findViewById(R.id.hintIntroducereCod);
+        butonSetariContProfesor = findViewById(R.id.setariContProfesor);
 
         //transfer
         if(getIntent().hasExtra("COD")){
@@ -132,5 +136,9 @@ public class ContProfesor extends AppCompatActivity {
         startActivityForResult(intentFeedback, 10);
     }
 
+    public void setariContProfesor(View view){
+        Intent intentSetariProfesor = new Intent(ContProfesor.this, setariContProfesor.class);
+        startActivityForResult(intentSetariProfesor, 18);
+    }
 
 }

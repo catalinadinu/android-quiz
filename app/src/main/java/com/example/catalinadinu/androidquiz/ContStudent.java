@@ -119,4 +119,9 @@ public class ContStudent extends Activity {
             }
         });
     }
+
+    public void setariContStudent(View view){
+        Intent intentSetariStudent = new Intent(ContStudent.this, setariContStudent.class);
+        startActivityForResult(intentSetariStudent, 19);
+    }
 }
