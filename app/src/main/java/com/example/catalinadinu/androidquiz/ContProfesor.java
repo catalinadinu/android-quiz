@@ -1,10 +1,12 @@
 package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,6 +27,8 @@ public class ContProfesor extends AppCompatActivity {
     private Button progres;
     private Button feedbackk;
     private ListView listaQuiz;
+    private TextView hintIntroducereCod;
+
     String prenumeProf;
 //    String numeProf;
     String codproff;
@@ -42,6 +46,7 @@ public class ContProfesor extends AppCompatActivity {
         progres = findViewById(R.id.veziProgres);
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
+        hintIntroducereCod = findViewById(R.id.hintIntroducereCod);
 
         //transfer
         if(getIntent().hasExtra("COD")){
@@ -54,12 +59,17 @@ public class ContProfesor extends AppCompatActivity {
             numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
         }
 
+
         //listview - adaptor personalizat
         Test[] testeStudent = new Test[]{
                 new Test("Test PAW", "5"),
                 new Test("Test SDD", "5"),
                 new Test("Test JAVA", "5"),
-                new Test("Test MULTIMEDIA", "5")
+                new Test("Test MULTIMEDIA", "5"),
+                new Test("Test DAM", "5"),
+                new Test("Test POO", "5"),
+                new Test("Test MULTIMEDIA", "5"),
+                new Test("Test TEHNOLOGII WEB", "5")
         };
 
         ArrayList<Test> listaTeste = new ArrayList<>();
@@ -77,6 +87,18 @@ public class ContProfesor extends AppCompatActivity {
                 startActivityForResult(intent, 9);
             }
         });
+
+
+        //stops the keyboard popup until you press the textview
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    }
+
+    public void trimiteCodStudent(){
+        String cod = hintIntroducereCod.getText().toString();
+
+        Intent intent = new Intent(ContProfesor.this, Progres.class);
+        intent.putExtra("codStud", cod);
+        startActivity(intent);
     }
 
 
@@ -86,8 +108,23 @@ public class ContProfesor extends AppCompatActivity {
     }
 
     public void VeziProgres(View view){
-        Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
-        startActivityForResult(intentProgres, 11);
+        if(hintIntroducereCod!=null){
+            if("".equals(hintIntroducereCod.getText().toString())){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Eroare");
+                builder.setMessage("Introduceți codul studentului!");
+                builder.setPositiveButton("OK", null);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+            else{
+                Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
+                startActivityForResult(intentProgres, 11);
+                trimiteCodStudent();
+            }
+
+        }
+
     }
 
     public void FormFeedback(View view){
