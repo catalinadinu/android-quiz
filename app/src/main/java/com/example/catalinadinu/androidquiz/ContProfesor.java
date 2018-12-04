@@ -11,6 +11,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.catalinadinu.androidquiz.clase.Test;
+import com.example.catalinadinu.androidquiz.clase.TesteAdaptorPersonalizat;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ContProfesor extends AppCompatActivity {
 
     private TextView numeUtilizator;
@@ -47,6 +53,20 @@ public class ContProfesor extends AppCompatActivity {
             //numeProf = getIntent().getExtras().getString("NUME");
             numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
         }
+
+        //listview - adaptor personalizat
+        Test[] testeStudent = new Test[]{
+                new Test("Test PAW", "5"),
+                new Test("Test SDD", "5"),
+                new Test("Test JAVA", "5"),
+                new Test("Test MULTIMEDIA", "5")
+        };
+
+        ArrayList<Test> listaTeste = new ArrayList<>();
+        listaTeste.addAll(Arrays.asList(testeStudent));
+
+        TesteAdaptorPersonalizat adaptorPersonalizat = new TesteAdaptorPersonalizat(this,android.R.layout.simple_list_item_1 ,listaTeste);
+        listaQuiz.setAdapter(adaptorPersonalizat);
 
 
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {

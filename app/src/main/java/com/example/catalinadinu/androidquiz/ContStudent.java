@@ -42,19 +42,19 @@ public class ContStudent extends Activity {
         incepeTest = findViewById(R.id.id_boutonQuizNouS);
         spinnerMaterie = findViewById(R.id.id_spinnerMaterieS);
         listViewTesteStudent = findViewById(R.id.listViewTesteStudent);
-        spinnerMaterie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(parent.getContext(), "Selectat: " + item, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+//        spinnerMaterie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//                String item = parent.getItemAtPosition(position).toString();
+//                Toast.makeText(parent.getContext(), "Selectat: " + item, Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
         //listview - adaptor personalizat
         Test[] testeStudent = new Test[]{
