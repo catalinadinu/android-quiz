@@ -97,13 +97,13 @@ public class ContProfesor extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-    public void trimiteCodStudent(){
-        String cod = hintIntroducereCod.getText().toString();
-
-        Intent intent = new Intent(ContProfesor.this, Progres.class);
-        intent.putExtra("codStud", cod);
-        startActivity(intent);
-    }
+//    public void trimiteCodStudent(){
+//        String cod = hintIntroducereCod.getText().toString();
+//
+//        Intent intent = new Intent(ContProfesor.this, Progres.class);
+//        intent.putExtra("codStud", cod);
+//        startActivity(intent);
+//    }
 
 
     public void adaugareTest(View view){
@@ -124,7 +124,7 @@ public class ContProfesor extends AppCompatActivity {
             else{
                 Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
                 startActivityForResult(intentProgres, 11);
-                trimiteCodStudent();
+                //trimiteCodStudent();
             }
 
         }

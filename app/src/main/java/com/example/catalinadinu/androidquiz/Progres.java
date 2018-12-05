@@ -32,8 +32,8 @@ public class Progres extends Activity {
         textViewCodStPreluat = findViewById(R.id.textViewCodStPreluat);
 
         //transfer
-        codStudent = getIntent().getExtras().getString("codStud");
-        textViewCodStPreluat.setText(codStudent);
+        //codStudent = getIntent().getExtras().getString("codStud");
+        //textViewCodStPreluat.setText(codStudent);
 
 
         //listview
