@@ -33,7 +33,6 @@ public class ContProfesor extends AppCompatActivity {
     private Button feedbackk;
     private ListView listaQuiz;
     private TextView hintIntroducereCod;
-    private ImageButton butonSetariContProfesor;
 
     String prenumeProf;
 //    String numeProf;
@@ -53,7 +52,6 @@ public class ContProfesor extends AppCompatActivity {
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
         hintIntroducereCod = findViewById(R.id.hintIntroducereCod);
-        butonSetariContProfesor = findViewById(R.id.setariContProfesor);
 
         //transfer
         if(getIntent().hasExtra("COD")){
@@ -114,8 +112,8 @@ public class ContProfesor extends AppCompatActivity {
             startActivityForResult(intentSchimbareParola, 18);
         }
         else if(item.getItemId() == R.id.deconectare){
-            Intent intentSchimbareParola = new Intent(ContProfesor.this, MainActivity.class);
-            startActivityForResult(intentSchimbareParola, 0);
+            Intent intentDeconectare = new Intent(ContProfesor.this, MainActivity.class);
+            startActivityForResult(intentDeconectare, 0);
         }
         else{
             return super.onOptionsItemSelected(item);
@@ -160,11 +158,6 @@ public class ContProfesor extends AppCompatActivity {
     public void FormFeedback(View view){
         Intent intentFeedback = new Intent(ContProfesor.this, FormularFeedback.class);
         startActivityForResult(intentFeedback, 10);
-    }
-
-    public void setariContProfesor(View view){
-        Intent intentSetariProfesor = new Intent(ContProfesor.this, setariContProfesor.class);
-        startActivityForResult(intentSetariProfesor, 18);
     }
 
 }

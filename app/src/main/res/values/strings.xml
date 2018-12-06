@@ -87,13 +87,15 @@
     <string name="TVpartajareCatre">Partajați testul către:</string>
     <string name="parasesteContStudent">Părăsește contul</string>
     <string name="parasesteContProfesor">Părăsește contul</string>
-    <string name="schimbaParola">Schimba parola</string>
+    <string name="schimbaParola">Schimbă parola</string>
     <string name="deconectare">Deconectare</string>
-
     <string name="intrebare1P">Intrebarea 1</string>
     <string name="intrebare2P">Intrebarea 2</string>
     <string name="intrebare3P">Intrebarea 3</string>
     <string name="intrebare4P">Intrebarea 4</string>
     <string name="intrebare5P">Intrebarea 5</string>
     <string name="raspunsI5">Raspuns corect</string>
+    <string name="schimbareParola">Schimbare parolă</string>
+    <string name="parolaVeche">Parola actuală</string>
+    <string name="parolaNoua">Parola nouă</string>
 </resources>

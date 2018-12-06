@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class setariContProfesor extends Activity {
 
@@ -13,8 +14,7 @@ public class setariContProfesor extends Activity {
         setContentView(R.layout.activity_setari_cont_profesor);
     }
 
-    public void deconectareProfesor(View view){
-        Intent intentDeconectareProfesor = new Intent(setariContProfesor.this, MainActivity.class);
-        startActivityForResult(intentDeconectareProfesor, 18);
+    public void schimbaParola(View view){
+        Toast.makeText(setariContProfesor.this,"Parola a fost modificată cu succes.", Toast.LENGTH_LONG).show();
     }
 }

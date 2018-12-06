@@ -12,9 +12,4 @@ public class setariContStudent extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setari_cont_student);
     }
-
-    public void deconectareStudent(View view){
-        Intent intentDeconectareStudent = new Intent(setariContStudent.this, MainActivity.class);
-        startActivityForResult(intentDeconectareStudent, 18);
-    }
 }
