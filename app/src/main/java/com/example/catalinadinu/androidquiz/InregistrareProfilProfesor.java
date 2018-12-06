@@ -76,7 +76,6 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
                 }
-                //Log.d("l am trimis fmm", "plm");
             }
         }
     }

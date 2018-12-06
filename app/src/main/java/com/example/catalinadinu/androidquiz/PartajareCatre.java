@@ -102,7 +102,6 @@ public class PartajareCatre extends Activity {
         @Override
         protected ProfPartajare doInBackground(Void... voids) {
                 String address = "http://api.myjson.com/bins/eiftq";
-                Log.d("MATA","OK");
                 HttpURLConnection connection = null;
                 try {
                     URL url = new URL(address);
