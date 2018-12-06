@@ -187,28 +187,35 @@ public class ContStudent extends Activity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
+    public void setariContStudent(View view){
+        Intent intentAd = new Intent(ContStudent.this, setariContStudent.class);
+        startActivityForResult(intentAd, 19);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.schimbaParola)
-        {
-            Intent intentSchimbareParola = new Intent(ContStudent.this, setariContStudent.class);
-            startActivityForResult(intentSchimbareParola, 18);
-        }
-        else if(item.getItemId() == R.id.deconectare){
-            Intent intentDeconectare = new Intent(ContStudent.this, MainActivity.class);
-            startActivityForResult(intentDeconectare, 0);
-        }
-        else{
-            return super.onOptionsItemSelected(item);
-        }
-        return true;
-    }
+
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.main_menu, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if(item.getItemId() == R.id.schimbaParola)
+//        {
+//            Intent intentSchimbareParola = new Intent(ContStudent.this, setariContStudent.class);
+//            startActivityForResult(intentSchimbareParola, 18);
+//        }
+//        else if(item.getItemId() == R.id.deconectare){
+//            Intent intentDeconectare = new Intent(ContStudent.this, MainActivity.class);
+//            startActivityForResult(intentDeconectare, 0);
+//        }
+//        else{
+//            return super.onOptionsItemSelected(item);
+//        }
+//        return true;
+//    }
 
     //clasa cu metode asincrone in care citim json-ul si adaugam materiilor citite in spinner
 //    class MaterieTest extends AsyncTask<String, Integer, Materie> { //param, progress, result

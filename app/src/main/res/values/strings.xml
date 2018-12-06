@@ -74,12 +74,12 @@
     <string name="TVms">Mulțumim! :)</string>
     <string name="comentariuFeedbackAplicatie"></string>
     <string name="TVinfo"></string>
-    <string name="denumireAplicatie">Mica Felină</string>
+    <string name="denumireAplicatie">Android Quiz</string>
     <string name="TVDescriere">Aplicație interactivă destinată creării și susținerii de teste în mediul universitar. Aplicația se adresează atât profesorilor, permițând crearea și partajarea de teste, cât și studenților, aceștia fiind
         evaluați într-o manieră inedită.
     </string>
     <string name="TVtitluContact">Contactează-ne!</string>
-    <string name="TVmailContact">Mail: micafelina@gmail.com</string>
+    <string name="TVmailContact">Mail: androidquiz@gmail.com</string>
     <string name="TVtelefonContact">Telefon: 0349 145 147</string>
     <string name="TVadresaContact">Adresa: Calea Dorobanți nr. 15-17, Sector 1, București.</string>
     <string name="TVsite">Proiect în cadrul Facultății de Cibernetică, Statistică și Informatică Economică</string>
@@ -88,7 +88,6 @@
     <string name="parasesteContStudent">Părăsește contul</string>
     <string name="parasesteContProfesor">Părăsește contul</string>
     <string name="schimbaParola">Schimbă parola</string>
-    <string name="deconectare">Deconectare</string>
     <string name="intrebare1P">Intrebarea 1</string>
     <string name="intrebare2P">Intrebarea 2</string>
     <string name="intrebare3P">Intrebarea 3</string>
@@ -98,4 +97,6 @@
     <string name="schimbareParola">Schimbare parolă</string>
     <string name="parolaVeche">Parola actuală</string>
     <string name="parolaNoua">Parola nouă</string>
+    <string name="deconectare">Deconectare</string>
+    <string name="setari">Setări cont</string>
 </resources>
