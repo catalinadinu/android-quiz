@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -21,6 +22,7 @@ import com.example.catalinadinu.androidquiz.clase.TesteAdaptorPersonalizat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import android.view.Menu;
+import android.widget.Toast;
 
 public class ContProfesor extends AppCompatActivity {
 
@@ -101,6 +103,23 @@ public class ContProfesor extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu );
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.schimbaParola)
+        {
+            Intent intentSchimbareParola = new Intent(ContProfesor.this, setariContProfesor.class);
+            startActivityForResult(intentSchimbareParola, 18);
+        }
+        else if(item.getItemId() == R.id.deconectare){
+            Intent intentSchimbareParola = new Intent(ContProfesor.this, MainActivity.class);
+            startActivityForResult(intentSchimbareParola, 0);
+        }
+        else{
+            return super.onOptionsItemSelected(item);
+        }
         return true;
     }
 
