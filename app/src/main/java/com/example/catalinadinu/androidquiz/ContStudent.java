@@ -112,64 +112,59 @@ public class ContStudent extends Activity {
             numeStud.setText(prenumestudd );//+ " " + numeProf);
         }
 
-//        List<String> materii = new ArrayList<>();
-//        materii.add("BTI");
-//        //materii.add("POO");
-//
-//        ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
-//        spinnerMaterie.setAdapter(adaptor);
+        List<String> materii = new ArrayList<>();
+        materii.add("BTI");
+        //materii.add("POO");
 
-        citesteJson();
-    }
-
-    public Materie citesteJson(String... strings) {
-        Log.d("intra", "aici intra");
-        List<Materie> materii = new ArrayList<>();
-        Log.d("intra2", "si aici intra");
-        if (strings != null && strings.length > 0) {
-            String str = strings[0];
-            String address = String.format("https://jsoneditoronline.org/?id=4d397d0f56d4449aa33c2768a035e739", str);
-            HttpURLConnection connection = null;
-            try {
-                URL url = new URL(address);
-                connection = (HttpURLConnection) url.openConnection();
-                InputStream inputStream = connection.getInputStream();
-                BufferedReader reader =
-                        new BufferedReader(new InputStreamReader(inputStream));
-                StringBuilder stringBuilder = new StringBuilder();
-                String line = null;
-                while ((line = reader.readLine()) != null) {
-                    stringBuilder.append(line);
-                }
-                String result = stringBuilder.toString();
-                Log.d("JSON", result);
-                Materie materie = new Materie();
-                JSONObject jsonObject = new JSONObject(result);
-                //JSONObject mainObject = jsonObject.getJSONObject("main");
-                Log.d("MA-TA", "PISPETINE");
-                materie.denumire = jsonObject.getString("denumire");
-                //JSONArray weatherArray = jsonObject.getJSONArray("weather");
-                //JSONObject weatherObject = (JSONObject) weatherArray.get(0);
-                materie.an = jsonObject.getString("an");
-                materie.tipExaminare = jsonObject.getString("tipExaminare");
-                materie.semestru = jsonObject.getString("semestru");
-                materii.add(materie);
-                return materie;
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-            }
-
-        }
-        ArrayAdapter<Materie> adaptor = new ArrayAdapter<>(ContStudent.this, R.layout.support_simple_spinner_dropdown_item, materii);
+        ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
         spinnerMaterie.setAdapter(adaptor);
-        return null;
+
+        //citesteJson();
     }
+
+//    public void citesteJson() {
+//        Log.d("intra", "aici intra");
+//        List<Materie> materii = new ArrayList<>();
+//        Log.d("intra2", "si aici intra");
+//        String address = "https://api.myjson.com/bins/10l6xq";
+//        HttpURLConnection connection = null;
+//            try {
+//                URL url = new URL(address);
+//                connection = (HttpURLConnection) url.openConnection();
+//                InputStream inputStream = connection.getInputStream();
+//                BufferedReader reader =
+//                        new BufferedReader(new InputStreamReader(inputStream));
+//                StringBuilder stringBuilder = new StringBuilder();
+//                String line = null;
+//                while ((line = reader.readLine()) != null) {
+//                    stringBuilder.append(line);
+//                }
+//                String result = stringBuilder.toString();
+//                Log.d("JSON", result);
+//                Materie materie = new Materie();
+//                JSONObject jsonObject = new JSONObject(result);
+//                //JSONObject mainObject = jsonObject.getJSONObject("main");
+//                Log.d("MA-TA", "PISPETINE");
+//                materie.denumire = jsonObject.getString("denumire");
+//                //JSONArray weatherArray = jsonObject.getJSONArray("weather");
+//                //JSONObject weatherObject = (JSONObject) weatherArray.get(0);
+//                materie.an = jsonObject.getString("an");
+//                materie.tipExaminare = jsonObject.getString("tipExaminare");
+//                materie.semestru = jsonObject.getString("semestru");
+//                materii.add(materie);
+//            } catch (MalformedURLException e) {
+//                e.printStackTrace();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            } finally {
+//                if (connection != null) {
+//                    connection.disconnect();
+//                }
+//            }
+//
+//        ArrayAdapter<Materie> adaptor = new ArrayAdapter<>(ContStudent.this, R.layout.support_simple_spinner_dropdown_item, materii);
+//        spinnerMaterie.setAdapter(adaptor);
+//    }
 
 
     public void IncepeTest(View view)
