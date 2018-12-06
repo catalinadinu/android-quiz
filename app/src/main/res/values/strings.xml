@@ -87,4 +87,6 @@
     <string name="TVpartajareCatre">Partajați testul către:</string>
     <string name="parasesteContStudent">Părăsește contul</string>
     <string name="parasesteContProfesor">Părăsește contul</string>
+    <string name="schimbaParola">Schimba parola</string>
+    <string name="deconectare">Deconectare</string>
 </resources>

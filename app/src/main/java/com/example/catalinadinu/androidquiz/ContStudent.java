@@ -2,22 +2,35 @@ package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.catalinadinu.androidquiz.clase.Materie;
 import com.example.catalinadinu.androidquiz.clase.StudentiAdaptorPersonalizat;
 import com.example.catalinadinu.androidquiz.clase.Test;
 import com.example.catalinadinu.androidquiz.clase.TesteAdaptorPersonalizat;
 import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,6 +38,7 @@ import java.util.List;
 public class ContStudent extends Activity {
 
     private Spinner spinnerMaterie;
+    private ProgressBar progressBar;
     private Button incepeTest;
     private TextView numeStud;
     private TextView codStud;
@@ -41,6 +55,7 @@ public class ContStudent extends Activity {
         numeStud = findViewById(R.id.textViewNumeContPersonalStud);
         codStud = findViewById(R.id.textViewCodContStud);
         incepeTest = findViewById(R.id.id_boutonQuizNouS);
+        progressBar = findViewById(R.id.progressBar);
         spinnerMaterie = findViewById(R.id.id_spinnerMaterieS);
         listViewTesteStudent = findViewById(R.id.listViewTesteStudent);
 //        spinnerMaterie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -97,13 +112,63 @@ public class ContStudent extends Activity {
             numeStud.setText(prenumestudd );//+ " " + numeProf);
         }
 
-        List<String> materii = new ArrayList<>();
-        materii.add("BTI");
-        //materii.add("POO");
+//        List<String> materii = new ArrayList<>();
+//        materii.add("BTI");
+//        //materii.add("POO");
+//
+//        ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
+//        spinnerMaterie.setAdapter(adaptor);
 
-        ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
+        citesteJson();
+    }
+
+    public Materie citesteJson(String... strings) {
+        Log.d("intra", "aici intra");
+        List<Materie> materii = new ArrayList<>();
+        Log.d("intra2", "si aici intra");
+        if (strings != null && strings.length > 0) {
+            String str = strings[0];
+            String address = String.format("https://jsoneditoronline.org/?id=4d397d0f56d4449aa33c2768a035e739", str);
+            HttpURLConnection connection = null;
+            try {
+                URL url = new URL(address);
+                connection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = connection.getInputStream();
+                BufferedReader reader =
+                        new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line = null;
+                while ((line = reader.readLine()) != null) {
+                    stringBuilder.append(line);
+                }
+                String result = stringBuilder.toString();
+                Log.d("JSON", result);
+                Materie materie = new Materie();
+                JSONObject jsonObject = new JSONObject(result);
+                //JSONObject mainObject = jsonObject.getJSONObject("main");
+                Log.d("MA-TA", "PISPETINE");
+                materie.denumire = jsonObject.getString("denumire");
+                //JSONArray weatherArray = jsonObject.getJSONArray("weather");
+                //JSONObject weatherObject = (JSONObject) weatherArray.get(0);
+                materie.an = jsonObject.getString("an");
+                materie.tipExaminare = jsonObject.getString("tipExaminare");
+                materie.semestru = jsonObject.getString("semestru");
+                materii.add(materie);
+                return materie;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+            }
+
+        }
+        ArrayAdapter<Materie> adaptor = new ArrayAdapter<>(ContStudent.this, R.layout.support_simple_spinner_dropdown_item, materii);
         spinnerMaterie.setAdapter(adaptor);
-
+        return null;
     }
 
 
@@ -113,7 +178,7 @@ public class ContStudent extends Activity {
             @Override
             public void onClick(View v) {
                 String valoareSpinner = spinnerMaterie.getSelectedItem().toString();
-                if(valoareSpinner.equals("BTI")){
+                if(!("".equals(valoareSpinner))){
                     Intent intentIncepeTest = new Intent(ContStudent.this, TestStudent.class);
                     startActivityForResult(intentIncepeTest, 7);}
             }
@@ -124,4 +189,31 @@ public class ContStudent extends Activity {
         Intent intentSetariStudent = new Intent(ContStudent.this, setariContStudent.class);
         startActivityForResult(intentSetariStudent, 19);
     }
+
+
+    //clasa cu metode asincrone in care citim json-ul si adaugam materiilor citite in spinner
+//    class MaterieTest extends AsyncTask<String, Integer, Materie> { //param, progress, result
+//
+//        @Override
+//        protected void onPreExecute() {
+//            if(progressBar != null) {
+//                progressBar.setVisibility(View.VISIBLE);
+//            }
+//        }
+//
+//
+//        @Override
+//        protected Materie doInBackground(String... strings){
+//            return cc;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(Materie materie) {
+//            if(progressBar != null) {
+//                progressBar.setVisibility(View.INVISIBLE);
+//            }
+//
+//
+//        }
+//    }
 }
