@@ -145,11 +145,7 @@ public class ContStudent extends Activity {
 //                Log.d("JSON", result);
 //                Materie materie = new Materie();
 //                JSONObject jsonObject = new JSONObject(result);
-//                //JSONObject mainObject = jsonObject.getJSONObject("main");
-//                Log.d("MA-TA", "PISPETINE");
 //                materie.denumire = jsonObject.getString("denumire");
-//                //JSONArray weatherArray = jsonObject.getJSONArray("weather");
-//                //JSONObject weatherObject = (JSONObject) weatherArray.get(0);
 //                materie.an = jsonObject.getString("an");
 //                materie.tipExaminare = jsonObject.getString("tipExaminare");
 //                materie.semestru = jsonObject.getString("semestru");
@@ -225,7 +221,7 @@ public class ContStudent extends Activity {
 //
 //        @Override
 //        protected Materie doInBackground(String... strings){
-//            return cc;
+//            return null;
 //        }
 //
 //        @Override

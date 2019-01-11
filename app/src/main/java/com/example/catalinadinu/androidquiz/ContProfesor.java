@@ -37,8 +37,7 @@ public class ContProfesor extends AppCompatActivity {
     String prenumeProf;
 //    String numeProf;
     String codproff;
-    //asta e la plezneala sa vedem daca merge, inlocuim pe urma cu un ArrayList
-    //String[] listaNumeQuiz = {"Quiz 1","Quiz 2","Quiz 3"}; //aici cred ca trebuie clasa facuta pt quiz
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,6 +3,7 @@ package com.example.catalinadinu.androidquiz;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.icu.text.LocaleDisplayNames;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.catalinadinu.androidquiz.clase.UtilizatorProfesor;
+import com.example.catalinadinu.androidquiz.clase.ProfesorContractBD;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class InregistrareProfilProfesor extends AppCompatActivity {
     private EditText nume;
@@ -21,7 +27,9 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     private EditText parola;
     private EditText confirmaParola;
     private Button creeazaCont;
-    private UtilizatorProfesor utilProf;
+    public UtilizatorProfesor utilProf;
+    public static List<UtilizatorProfesor> profesori =  new ArrayList<>();
+    public ProfesorContractBD profesorContractBD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,9 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         parola = findViewById(R.id.id_parolaProfI);
         confirmaParola = findViewById(R.id.id_confirmaParolaProfI);
         creeazaCont=findViewById(R.id.id_butonInregistreaza);
+
+        profesorContractBD = new ProfesorContractBD(this);
+
     }
 
     public void trimiteNume() {
@@ -67,11 +78,15 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                 if(confirmaParola.getText().toString().equals(parola.getText().toString())){
                     utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
-
+                    profesori.add(utilProf);
+                    profesorContractBD.insertSample();
+                    //Log.d("plm", profesori.toString());
                     Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
                     startActivityForResult(intentConectare, 5);
                     //apel functie transfer obiect
                     trimiteNume();
+
+
                 }
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();
