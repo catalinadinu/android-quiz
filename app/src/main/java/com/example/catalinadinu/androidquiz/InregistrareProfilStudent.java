@@ -1,7 +1,5 @@
 package com.example.catalinadinu.androidquiz;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +9,11 @@ import android.widget.EditText;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.catalinadinu.androidquiz.clase.DatabaseContract;
 import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InregistrareProfilStudent extends AppCompatActivity {
 
@@ -21,7 +23,9 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private EditText parola;
     private EditText confirmaParola;
     private Button creeazaCont;
-    private UtilizatorStudent utilStud;
+    public UtilizatorStudent utilStud;
+    public static List<UtilizatorStudent> studenti = new ArrayList<>();
+    public DatabaseContract studentContractBD;
 
 
     @Override
@@ -36,6 +40,8 @@ public class InregistrareProfilStudent extends AppCompatActivity {
         confirmaParola = findViewById(R.id.id_confirmParolaStudI);
         creeazaCont = findViewById(R.id.id_butonInregistreazaStud);
         //radioGroupTip = findViewById(R.id.id_radioGrup);
+
+        studentContractBD = new DatabaseContract(this);
 
     }
 
@@ -77,6 +83,9 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                     if (confirmaParola.getText().toString().equals(parola.getText().toString())) { //&& (emailValue.matches(emailPattern))) {
                         utilStud = new UtilizatorStudent(nume.getText().toString(), prenume.getText().toString(), email.getText().toString(),
                                 parola.getText().toString(), confirmaParola.getText().toString());
+                        studenti.add(utilStud);
+                        //Log.d("MUIE", studenti.toString());
+                        studentContractBD.insertStud();
                         Intent intentConectare = new Intent(InregistrareProfilStudent.this, ContStudent.class);
                         startActivityForResult(intentConectare, 6);
                         trimiteNume();

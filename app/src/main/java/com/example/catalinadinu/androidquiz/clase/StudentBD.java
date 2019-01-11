@@ -1,11 +1,9 @@
 package com.example.catalinadinu.androidquiz.clase;
 
-//baza de date
-
 import android.database.sqlite.SQLiteDatabase;
 
-public class ProfesorBD {
-    public static final String TABLE_NAME = "profesori"; // table name
+public class StudentBD {
+    public static final String TABLE_NAME = "studenti"; // table name
     public static final String COLUMN_ID = "_id"; // attribute --- also primary key
     public static final String COLUMN_LAST_NAME = "nume"; // attribute
     public static final String COLUMN_FIRST_NAME = "prenume"; // attribute

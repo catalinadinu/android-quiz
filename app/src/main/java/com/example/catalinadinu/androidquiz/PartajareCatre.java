@@ -2,9 +2,7 @@ package com.example.catalinadinu.androidquiz;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,18 +11,13 @@ import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-import org.json.JSONObject;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.catalinadinu.androidquiz.clase.DatabaseContract;
 import com.example.catalinadinu.androidquiz.clase.ProfPartajare;
 import com.example.catalinadinu.androidquiz.clase.ProfesorBD;
-import com.example.catalinadinu.androidquiz.clase.ProfesorContractBD;
 
 public class PartajareCatre extends Activity {
     private Spinner spinnerMaterieProf;
@@ -92,8 +85,8 @@ public class PartajareCatre extends Activity {
             }
         });
 
-        ProfesorContractBD contract = new ProfesorContractBD(this);
-        Cursor result  = contract.getDataCursor(); // Here you take the cursor from DemoDatabase
+        DatabaseContract contract = new DatabaseContract(this);
+        Cursor result  = contract.getProfDataCursor(); // Here you take the cursor from DemoDatabase
 
         // The input for a simple cursor adapter
 
