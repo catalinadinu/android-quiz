@@ -19,8 +19,7 @@ public class ConectareProfesor extends Activity {
     private TextView cod;
     private Button conectareProf;
     private UtilizatorProfesor utilProf;
-    //String firstName;
-    //String lastName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,23 +31,9 @@ public class ConectareProfesor extends Activity {
         cod = findViewById(R.id.id_codProfConectare);
         conectareProf = findViewById(R.id.id_butonConectare);
 
-
-//        if(getIntent() !=null){
-//            firstName = getIntent().getExtras().getString("PRENUME");
-//            lastName = getIntent().getExtras().getString("NUME");
-//
-//        }
-//        Log.d(firstName.toString(), "plmmmmmmm");
-//        Log.d(lastName.toString(), "plmmmmmmm2");
     }
 
-    public void trimiteNumeCont(){
-//
-//        Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
-//        intent.putExtra("Nume", lastName);
-//        intent.putExtra("Prenume", firstName);
-//        startActivity(intent);
-
+    public void trimiteCodCont(){
         String codProf = cod.getText().toString();
 
         Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
@@ -79,7 +64,7 @@ public class ConectareProfesor extends Activity {
                 Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);
                 startActivityForResult(intentConectareProf, 5);
 
-                trimiteNumeCont();
+                trimiteCodCont();
             }
 
             }
