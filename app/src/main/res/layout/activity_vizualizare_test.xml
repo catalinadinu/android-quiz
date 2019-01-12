@@ -9,6 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     android:fillViewport="true">
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -60,6 +61,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:text="@string/intrebare1P"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/scrollView2" />
@@ -81,6 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
 
             <RadioButton
@@ -88,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
 
             <RadioButton
@@ -95,6 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
         </RadioGroup>
 
@@ -106,6 +112,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:text="@string/intrebare2P"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupI1" />
@@ -126,6 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
 
             <RadioButton
@@ -133,6 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
 
             <RadioButton
@@ -140,6 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="#0F194C"
                 android:text="RadioButton" />
         </RadioGroup>
 
@@ -151,6 +162,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:text="@string/intrebare3P"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupI2" />
@@ -163,6 +176,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="5dp"
             android:text="CheckBox"
+            android:buttonTint="#0F194C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
@@ -176,6 +190,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="CheckBox"
+        android:buttonTint="#0F194C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,6 +204,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="CheckBox"
+        android:buttonTint="#0F194C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,6 +218,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:text="@string/intrebare4P"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox3.3" />
@@ -214,6 +232,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:text="CheckBox"
+            android:buttonTint="#0F194C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
@@ -227,6 +246,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="CheckBox"
+        android:buttonTint="#0F194C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -240,6 +260,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="CheckBox"
+        android:buttonTint="#0F194C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -253,6 +274,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:text="@string/intrebare5P"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox4.3" />
@@ -266,6 +289,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/raspunsI5"
+            android:fontFamily="casual"
+            android:textColor="#111E6C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

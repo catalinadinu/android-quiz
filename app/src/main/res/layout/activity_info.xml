@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     tools:context=".Info">
 
     <TextView
@@ -15,6 +16,8 @@
         android:layout_marginEnd="8dp"
         android:gravity="center_vertical|fill_horizontal"
         android:text="@string/TVDescriere"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVversiune" />
@@ -27,6 +30,8 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:text="Versiune: 1.0"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/denumireAplicatie" />
@@ -39,6 +44,10 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:text="@string/denumireAplicatie"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
