@@ -100,4 +100,5 @@
     <string name="deconectare">Deconectare</string>
     <string name="title_activity_maps">Map</string>
     <string name="setari">Setari cont</string>
+    <string name="editTextRaspunsDeschis">Raspuns</string>
 </resources>
