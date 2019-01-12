@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     tools:context=".PartajareCatre">
 
     <ListView
@@ -13,6 +14,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -25,6 +28,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/TVpartajareCatre"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,6 +44,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:visibility="invisible"
+        android:indeterminateTint = "#111E6C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

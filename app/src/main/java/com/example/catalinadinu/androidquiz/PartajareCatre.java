@@ -2,35 +2,20 @@ package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.SimpleCursorAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import com.example.catalinadinu.androidquiz.clase.DatabaseContract;
 import com.example.catalinadinu.androidquiz.clase.HttpHandler;
 import com.example.catalinadinu.androidquiz.clase.ProfPartajare;
-import com.example.catalinadinu.androidquiz.clase.ProfesorBD;
-import com.example.catalinadinu.androidquiz.clase.UtilizatorProfesor;
-import com.google.gson.JsonArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -63,7 +48,7 @@ public class PartajareCatre extends Activity {
         });
 
         //afisare din baza de date 
-//        DatabaseContract contract = new DatabaseContract(this); 
+//        ContractBazaDate contract = new ContractBazaDate(this);
 //        Cursor result  = contract.getProfDataCursor(); // Here you take the cursor from DemoDatabase 
 //        SimpleCursorAdapter simpleCursorAdapter = new SimpleCursorAdapter 
 //                (//simple_list_item_2 because you give it 2 thingies to display --- ID & Faculty 
