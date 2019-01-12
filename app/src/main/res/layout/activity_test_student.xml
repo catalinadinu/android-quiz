@@ -14,7 +14,6 @@
     android:layout_height="match_parent"
     tools:context=".TestStudent">
 
-<<<<<<< HEAD
     <TextView
         android:id="@+id/intrebare5"
         android:layout_width="wrap_content"
