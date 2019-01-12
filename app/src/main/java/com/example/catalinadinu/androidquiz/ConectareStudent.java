@@ -54,8 +54,8 @@ public class ConectareStudent extends Activity {
                 dialog.show();
             }
             else {
-                utilizatorStudent = new UtilizatorStudent(email.getText().toString(),
-                        parola.getText().toString(), cod.getText().toString());
+//                utilizatorStudent = new UtilizatorStudent(email.getText().toString(),
+//                        parola.getText().toString(), cod.getText().toString());
                 Intent intentConectareStud = new Intent(ConectareStudent.this, ContStudent.class);
                 startActivityForResult(intentConectareStud, 6);
                 trimiteNumeCont();

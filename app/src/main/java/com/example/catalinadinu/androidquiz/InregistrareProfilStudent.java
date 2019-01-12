@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.catalinadinu.androidquiz.clase.DatabaseContract;
+import com.example.catalinadinu.androidquiz.clase.ContractBazaDate;
 import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
     private Button creeazaCont;
     public UtilizatorStudent utilStud;
     public static List<UtilizatorStudent> studenti = new ArrayList<>();
-    public DatabaseContract studentContractBD;
+    public ContractBazaDate studentContractBD;
 
 
     @Override
@@ -41,7 +41,7 @@ public class InregistrareProfilStudent extends AppCompatActivity {
         creeazaCont = findViewById(R.id.id_butonInregistreazaStud);
         //radioGroupTip = findViewById(R.id.id_radioGrup);
 
-        studentContractBD = new DatabaseContract(this);
+        studentContractBD = new ContractBazaDate(this);
 
     }
 

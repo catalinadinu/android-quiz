@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.catalinadinu.androidquiz.clase.DatabaseContract;
+import com.example.catalinadinu.androidquiz.clase.ContractBazaDate;
 import com.example.catalinadinu.androidquiz.clase.UtilizatorProfesor;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     private Button creeazaCont;
     public UtilizatorProfesor utilProf;
     public static List<UtilizatorProfesor> profesori =  new ArrayList<>();
-    public DatabaseContract profesorContractBD;
+    public ContractBazaDate profesorContractBD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         confirmaParola = findViewById(R.id.id_confirmaParolaProfI);
         creeazaCont=findViewById(R.id.id_butonInregistreaza);
 
-        profesorContractBD = new DatabaseContract(this);
+        profesorContractBD = new ContractBazaDate(this);
 
     }
 

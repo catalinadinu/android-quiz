@@ -11,14 +11,14 @@ import android.widget.Toast;
 import com.example.catalinadinu.androidquiz.InregistrareProfilProfesor;
 import com.example.catalinadinu.androidquiz.InregistrareProfilStudent;
 
-public class DatabaseContract extends SQLiteOpenHelper {
+public class ContractBazaDate extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "databaseQuiz.sqLite.db";
     private static final int DB_VERS = 1;
 
-    private static final String TAG = DatabaseContract.class.getSimpleName();
+    private static final String TAG = ContractBazaDate.class.getSimpleName();
     private Context lContext;
 
-    public DatabaseContract(Context context){
+    public ContractBazaDate(Context context){
         super(context, DATABASE_NAME, null, DB_VERS);
         this.lContext = context;
     }
@@ -74,6 +74,14 @@ public class DatabaseContract extends SQLiteOpenHelper {
         return cursor;
     }
 
+
+    public Cursor getInregistrareDataProfCursor (String email) // pointer / sort of a query
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] array=new String[]{email};
+        Cursor cursor = db.rawQuery("SELECT email, parola FROM profesori WHERE email=?",array);
+        return cursor;
+    }
 
     public Cursor getStudDataCursor ()
     {
