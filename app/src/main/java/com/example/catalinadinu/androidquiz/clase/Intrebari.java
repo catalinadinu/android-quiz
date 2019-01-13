@@ -3,7 +3,7 @@ package com.example.catalinadinu.androidquiz.clase;
 public class Intrebari {
 
     public String listaIntrebari[] = {
-            "Gestiunea fisierelor este o functie a?",
+            "Gestiunea fisierelor este o functie a:",
             "Care nu este un sistem de operare?",
             "Capacitatea de reprezentare a unui hard disk este reprezentata prin:",
             "Cat ocupa o variabila de tip long double?",
