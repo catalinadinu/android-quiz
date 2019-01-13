@@ -68,7 +68,7 @@ public class ContProfesor extends AppCompatActivity {
         hintIntroducereCod = findViewById(R.id.hintIntroducereCod);
         setariContProfesor = findViewById(R.id.setariContProfesor);
 
-        //transfer
+
         if(getIntent().hasExtra("COD")){
             codproff = getIntent().getExtras().getString("COD");
             codProfesor.setText(codproff);
@@ -78,7 +78,7 @@ public class ContProfesor extends AppCompatActivity {
             numeUtilizator.setText(prenumeProf );
         }
 
-        //intent inregistrare
+
         if(getIntent().hasExtra("inregistrare"))
         {
             setariContProfesor.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +94,7 @@ public class ContProfesor extends AppCompatActivity {
         }
 
 
-        //transfer
+
         if(getIntent().hasExtra("COD")){
             codproff = getIntent().getExtras().getString("COD");
             codProfesor.setText(codproff);
@@ -105,7 +105,7 @@ public class ContProfesor extends AppCompatActivity {
         }
 
 
-        //listview - adaptor personalizat
+
         Test[] testeStudent = new Test[]{
                 new Test("Test PAW", "5"),
                 new Test("Test SDD", "5"),
@@ -124,7 +124,7 @@ public class ContProfesor extends AppCompatActivity {
         listaQuiz.setAdapter(adaptorPersonalizat);
 
 
-        //item selectat din listview
+
         listaQuiz.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -134,7 +134,7 @@ public class ContProfesor extends AppCompatActivity {
         });
 
 
-        //stops the keyboard popup until you press the textview
+
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 

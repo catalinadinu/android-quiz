@@ -28,7 +28,7 @@ public class PopUpFeedback extends Activity {
     }
 
     public void adaugaNota(View view){
-        //functie care sa adauge nota studentului in lista sau ceva
+
 
         Intent intent = new Intent(PopUpFeedback.this, FormularFeedback.class);
         startActivityForResult(intent, 10);

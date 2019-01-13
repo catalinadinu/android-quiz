@@ -51,8 +51,7 @@ public class Contact extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
         try {
-            // Customise the styling of the base map using a JSON object defined
-            // in a raw resource file.
+
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
                             this, R.raw.style_json));

@@ -33,11 +33,11 @@ public class setariContStudent extends Activity {
                 ContractBazaDate bazaDate = new ContractBazaDate(getApplicationContext());
                 Cursor cursor = bazaDate.getInregistrareDataStudCursor(InregistrareProfilStudent.studentDetaliiCont.getEmail());
 
-                //Log.d("cursor", cursor.getCount()+"");
+
                 if(cursor.getCount() == 1){
                     cursor.moveToNext();
                     String parolaStudent = cursor.getString(cursor.getColumnIndex(StudentBD.COLUMN_PASSWORD));
-                    //Log.d("intru", cursor.getString(cursor.getColumnIndex(StudentBD.COLUMN_PASSWORD)));
+
 
                     if(!cursor.isClosed()){
                         cursor.close();

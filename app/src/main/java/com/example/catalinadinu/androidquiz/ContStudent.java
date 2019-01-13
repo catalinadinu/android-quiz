@@ -75,7 +75,7 @@ public class ContStudent extends Activity {
         setariContStudent = findViewById(R.id.setariContStudent);
 
 
-        //intent inregistrare
+
         if(getIntent().hasExtra("inregistrareStud"))
         {
             setariContStudent.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +90,7 @@ public class ContStudent extends Activity {
             setariContStudent.setVisibility(View.GONE);
         }
 
-        //listview - adaptor personalizat
+
         Test[] testeStudent = new Test[]{
                 new Test("Test POO", "5"),
                 new Test("Test JAVA", "5"),
@@ -105,7 +105,7 @@ public class ContStudent extends Activity {
         listViewTesteStudent.setAdapter(adaptorPersonalizat);
 
 
-        //item selectat din listview
+
         listViewTesteStudent.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
             @Override
@@ -119,7 +119,7 @@ public class ContStudent extends Activity {
 
 
 
-        //transfer
+
         if(getIntent().hasExtra("COD")){
             codstudd = getIntent().getExtras().getString("COD");
             codStud.setText(codstudd);
@@ -139,7 +139,7 @@ public class ContStudent extends Activity {
         ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
         spinnerMaterie.setAdapter(adaptor);
 
-        //citesteJson();
+
 
         imagine = (ImageView) findViewById(R.id.profil);
         poza = (FloatingActionButton) findViewById(R.id.poza);

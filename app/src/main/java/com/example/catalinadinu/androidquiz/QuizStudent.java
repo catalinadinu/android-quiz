@@ -13,12 +13,7 @@ import com.example.catalinadinu.androidquiz.clase.Intrebari;
 
 public class QuizStudent extends Activity {
 
-    Button raspuns1;
-    Button raspuns2;
-    Button raspuns3;
-    Button raspuns4;
-    TextView scorTest;
-    TextView intrebare;
+
     private Intrebari listaIntrebari = new Intrebari();
     private String raspunsCorect;
     private int scorul =0;
@@ -26,6 +21,13 @@ public class QuizStudent extends Activity {
     private int lungimeIntrebare = listaIntrebari.listaIntrebari.length;
     private int r=0;
 
+
+    Button raspuns1;
+    Button raspuns2;
+    Button raspuns3;
+    Button raspuns4;
+    TextView scorTest;
+    TextView intrebare;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

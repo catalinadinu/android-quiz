@@ -34,11 +34,11 @@ public class setariContProfesor extends Activity {
                 ContractBazaDate bazaDate = new ContractBazaDate(getApplicationContext());
                 Cursor cursor = bazaDate.getInregistrareDataProfCursor(InregistrareProfilProfesor.profesorDetaliiCont.getEmail());
 
-                //Log.d("cursor", cursor.getCount()+"");
+
                 if(cursor.getCount() == 1){
                     cursor.moveToNext();
                     String parolaProfesor = cursor.getString(cursor.getColumnIndex(ProfesorBD.COLUMN_PASSWORD));
-                    //Log.d("intru", cursor.getString(cursor.getColumnIndex(StudentBD.COLUMN_PASSWORD)));
+
 
                     if(!cursor.isClosed()){
                         cursor.close();

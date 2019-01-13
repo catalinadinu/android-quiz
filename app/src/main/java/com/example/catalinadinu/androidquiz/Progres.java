@@ -31,12 +31,10 @@ public class Progres extends Activity {
         progresStudent = findViewById(R.id.progresStudent);
         textViewCodStPreluat = findViewById(R.id.textViewCodStPreluat);
 
-        //transfer
-        //codStudent = getIntent().getExtras().getString("codStud");
-        //textViewCodStPreluat.setText(codStudent);
 
 
-        //listview
+
+
         Test[] testeStudent = new Test[]{
                 new Test("Test SDD", "5"),
                 new Test("Test JAVA", "5"),

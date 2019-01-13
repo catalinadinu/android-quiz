@@ -20,7 +20,7 @@ public class FinalTest extends Activity {
 
         rating = findViewById(R.id.ratingBarDificultate);
         rate =  findViewById(R.id.butonSubmitFinalizareTest);
-        //rating.setRating(int);
+
 
     }
 

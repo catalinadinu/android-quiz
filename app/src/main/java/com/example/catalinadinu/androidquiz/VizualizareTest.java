@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class VizualizareTest extends Activity {
 
-    //va fi legat de un item din listview cand acesta va fi populat
+
     private ImageButton partajareTest;
 
     @Override

@@ -148,7 +148,7 @@ public class ConectareStudent extends Activity {
                     if (!email.getText().toString().equals(stud.getEmail()) &&
                             !parola.getText().toString().equals(stud.getParola()) &&
                             !cod.getText().toString().equals(stud.getCodStudent())) {
-                        //Log.d("email", email.getText().toString() + "+" + stud.getEmail());
+
                         Toast.makeText(getApplicationContext(), "Datele nu sunt introduse corect!", Toast.LENGTH_SHORT).show();
                     }
 //                    else if(){

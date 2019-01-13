@@ -51,24 +51,22 @@ public class InregistrareProfilStudent extends AppCompatActivity {
 
 
     public void trimiteNume() {
-        //intent implicit pentru a transfera parametrii
-        //String last = nume.getText().toString();
+
         String first = prenume.getText().toString();
 
         Intent intent = new Intent(InregistrareProfilStudent.this, ContStudent.class);
         intent.putExtra("PRENUME", first);
-        //intent.putExtra("NUME", last);
+
         startActivity(intent);
     }
 
     public void trimiteEmailStudent(){
-        //baza de date
+
         String emailStudentTextView = email.getText().toString();
         ContractBazaDate bazaDate = new ContractBazaDate(this);
         Cursor cursor = bazaDate.getInregistrareDataStudCursor(emailStudentTextView);
 
-        //Log.d("intru", "intruuuu");
-        //Log.d("cursor", cursor.getCount()+"");
+
         if(cursor.getCount() == 1){
             cursor.moveToFirst();
 
