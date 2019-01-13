@@ -28,6 +28,7 @@ public class AdaugareTest extends Activity {
     private ListView listViewRaspunsDeschis;
     private Button adTest;
 
+    //aici ar trebui sa se adauge testul in tabela pe care o sa o facem mai tarziu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
