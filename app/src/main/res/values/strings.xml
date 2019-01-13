@@ -108,4 +108,10 @@
     <string name="textViewPrenumeStudent">Prenume: </string>
     <string name="textViewEmailStudent">Email: </string>
     <string name="buttonStergeCont">Sterge cont</string>
+    <string name="detaliiContProfesor">Detalii cont</string>
+    <string name="detaliiContProf">Detalii cont</string>
+    <string name="textViewNumeProf">Nume: </string>
+    <string name="textViewPrenumeProf">Prenume: </string>
+    <string name="textViewEmailProf">Email: </string>
+    <string name="buttonStergeContProf">Sterge cont</string>
 </resources>

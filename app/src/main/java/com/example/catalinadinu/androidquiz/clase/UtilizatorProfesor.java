@@ -11,6 +11,10 @@ public class UtilizatorProfesor implements Serializable {
     private String confirmaParola;
     private String cod;
 
+    public UtilizatorProfesor(String email) {
+        this.email = email;
+    }
+
     public UtilizatorProfesor() {
     }
 

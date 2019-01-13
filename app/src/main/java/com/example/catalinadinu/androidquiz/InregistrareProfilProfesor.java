@@ -2,15 +2,20 @@ package com.example.catalinadinu.androidquiz;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.catalinadinu.androidquiz.clase.ContractBazaDate;
+import com.example.catalinadinu.androidquiz.clase.ProfesorBD;
+import com.example.catalinadinu.androidquiz.clase.StudentBD;
 import com.example.catalinadinu.androidquiz.clase.UtilizatorProfesor;
+import com.example.catalinadinu.androidquiz.clase.UtilizatorStudent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +31,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     public UtilizatorProfesor utilProf;
     public static List<UtilizatorProfesor> profesori =  new ArrayList<>();
     public ContractBazaDate profesorContractBD;
+    public static UtilizatorProfesor profesorDetaliiCont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,28 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void trimiteEmailProfesor(){
+        //baza de date
+        String emailProfTextView = email.getText().toString();
+        ContractBazaDate bazaDate = new ContractBazaDate(this);
+        Cursor cursor = bazaDate.getInregistrareDataProfCursor(emailProfTextView);
+
+        Log.d("cursor", cursor.getCount()+"");
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+
+            String emailProf = cursor.getString(cursor.getColumnIndex(ProfesorBD.COLUMN_EMAIL));
+
+            if(email.getText().toString().equals(emailProf)){
+                profesorDetaliiCont = new UtilizatorProfesor(emailProf);
+            }
+        }
+//        else {
+//            Toast.makeText(getApplicationContext(), "Emailul exista deja in baza de date!", Toast.LENGTH_LONG).show();
+//        }
+
+    }
+
 
         public void creeazaContProfesor(View view)
     {
@@ -75,12 +103,17 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                     utilProf = new UtilizatorProfesor(nume.getText().toString(),prenume.getText().toString(), email.getText().toString(),
                             parola.getText().toString(), confirmaParola.getText().toString());
                     profesori.add(utilProf);
-                    profesorContractBD.insertProf();
-                    //Log.d("plm", profesori.toString());
-                    Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
-                    startActivityForResult(intentConectare, 5);
-                    //apel functie transfer obiect
-                    trimiteNume();
+
+                    if(profesorContractBD.insertProf() ==  -1){
+                        Toast.makeText(this, "Email-ul apartine unui cont existent!", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Cont adaugat in baza de date!", Toast.LENGTH_LONG).show();
+                        Intent intentConectare = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+                        startActivityForResult(intentConectare, 5);
+                        trimiteNume();
+                        trimiteEmailProfesor();
+                    }
                 }
                 else {
                     Toast.makeText(InregistrareProfilProfesor.this, "Parola nu coincide!", Toast.LENGTH_SHORT).show();

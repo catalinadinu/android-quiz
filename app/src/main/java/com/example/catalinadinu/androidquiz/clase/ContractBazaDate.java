@@ -37,19 +37,20 @@ public class ContractBazaDate extends SQLiteOpenHelper {
     }
 
     //INSERT
-    public void insertProf () {
+    public long insertProf () {
         SQLiteDatabase db = this.getWritableDatabase(); //Create and/or open a database that will be used for reading and writing.
-
+        long result = 0;
         for(UtilizatorProfesor profesor : InregistrareProfilProfesor.profesori){
             ContentValues cv = new ContentValues(); // Creates an empty set of values using the default initial size
             cv.put(ProfesorBD.COLUMN_LAST_NAME, profesor.getNume());
             cv.put(ProfesorBD.COLUMN_FIRST_NAME, profesor.getPrenume());
             cv.put(ProfesorBD.COLUMN_EMAIL, profesor.getEmail());
             cv.put(ProfesorBD.COLUMN_PASSWORD, profesor.getParola());
-            long result = db.insert(ProfesorBD.TABLE_NAME, null, cv);
+            result = db.insert(ProfesorBD.TABLE_NAME, null, cv);
 
-            Toast.makeText(lContext, "Index valoare adaugata in tabela:" + result, Toast.LENGTH_LONG).show();
+            //Toast.makeText(lContext, "Index valoare adaugata in tabela:" + result, Toast.LENGTH_LONG).show();
         }
+        return result;
     }
 
     public long insertStud () {
@@ -85,10 +86,25 @@ public class ContractBazaDate extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor getInregistrareDataProfCursor (String email) // pointer / sort of a query
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] array=new String[]{email};
+        Cursor cursor = db.rawQuery(" SELECT email, parola FROM profesori WHERE email=?",array);
+        return cursor;
+    }
+
     public Cursor getStudentBDDataCursor(String email){
         SQLiteDatabase db=this.getReadableDatabase();
         String[] array = new String[]{email};
         Cursor cursor = db.rawQuery(" SELECT nume, prenume, email FROM studenti WHERE email=?",array);
+        return cursor;
+    }
+
+    public Cursor getProfBDDataCursor(String email){
+        SQLiteDatabase db=this.getReadableDatabase();
+        String[] array = new String[]{email};
+        Cursor cursor = db.rawQuery(" SELECT nume, prenume, email FROM profesori WHERE email=?",array);
         return cursor;
     }
 
@@ -120,5 +136,14 @@ public class ContractBazaDate extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("parola",parola);
         int result = db.update(StudentBD.TABLE_NAME, contentValues,"email=?",array);
+    }
+
+    public void updateParolaProfesor(String email,String parola)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String[] array = new String[]{email};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("parola",parola);
+        int result = db.update(ProfesorBD.TABLE_NAME, contentValues,"email=?",array);
     }
 }
