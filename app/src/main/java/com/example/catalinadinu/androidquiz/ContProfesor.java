@@ -51,7 +51,6 @@ public class ContProfesor extends AppCompatActivity {
     private ImageButton setariContProfesor;
 
     String prenumeProf;
-//    String numeProf;
     String codproff;
 
 
@@ -76,8 +75,7 @@ public class ContProfesor extends AppCompatActivity {
         }
         else if (getIntent().hasExtra("PRENUME")){
             prenumeProf = getIntent().getExtras().getString("PRENUME");
-            //numeProf = getIntent().getExtras().getString("NUME");
-            numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
+            numeUtilizator.setText(prenumeProf );
         }
 
         //intent inregistrare
@@ -103,8 +101,7 @@ public class ContProfesor extends AppCompatActivity {
         }
         else if (getIntent().hasExtra("PRENUME")){
             prenumeProf = getIntent().getExtras().getString("PRENUME");
-            //numeProf = getIntent().getExtras().getString("NUME");
-            numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
+            numeUtilizator.setText(prenumeProf );
         }
 
 
@@ -225,14 +222,6 @@ public class ContProfesor extends AppCompatActivity {
         return true;
     }
 
-    //    public void trimiteCodStudent(){
-//        String cod = hintIntroducereCod.getText().toString();
-//
-//        Intent intent = new Intent(ContProfesor.this, Progres.class);
-//        intent.putExtra("codStud", cod);
-//        startActivity(intent);
-//    }
-
 
     public void adaugareTest(View view){
         Intent intentAd = new Intent(ContProfesor.this, AdaugareTest.class);
@@ -252,7 +241,6 @@ public class ContProfesor extends AppCompatActivity {
             else{
                 Intent intentProgres = new Intent(ContProfesor.this, Progres.class);
                 startActivityForResult(intentProgres, 11);
-                //trimiteCodStudent();
             }
 
         }
@@ -263,9 +251,5 @@ public class ContProfesor extends AppCompatActivity {
         Intent intentFeedback = new Intent(ContProfesor.this, FormularFeedback.class);
         startActivityForResult(intentFeedback, 10);
     }
-
-//    public void setariContProfesor(View view){
-//
-//    }
 
 }

@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#F4FDFF"
     >
 
     <TextView
@@ -10,32 +11,42 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
-        android:textColor="@color/colorPrimaryDark" />
+        android:fontFamily="casual"
+        android:textColor="#111E6C"/>
 
     <TextView
         android:id="@+id/textIntrebare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#5d5d5d"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"/>
 
     <TextView
         android:id="@+id/raspuns1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"/>
 
     <TextView
         android:id="@+id/raspuns2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"/>
 
     <TextView
         android:id="@+id/raspuns3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"/>
 
     <TextView
         android:id="@+id/raspunsCorect"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textColor="#111E6C" />
 </LinearLayout>

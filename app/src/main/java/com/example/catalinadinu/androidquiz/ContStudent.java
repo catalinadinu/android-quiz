@@ -59,7 +59,6 @@ public class ContStudent extends Activity {
     Integer SELECT_FILE = 0;
     FloatingActionButton poza;
     String prenumestudd;
-    //String numeProf;
     String codstudd;
 
     @Override
@@ -127,8 +126,7 @@ public class ContStudent extends Activity {
         }
         else if (getIntent().hasExtra("PRENUME")){
             prenumestudd = getIntent().getExtras().getString("PRENUME");
-            //numeProf = getIntent().getExtras().getString("NUME");
-            numeStud.setText(prenumestudd );//+ " " + numeProf);
+            numeStud.setText(prenumestudd );
         }
 
         List<String> materii = new ArrayList<>();
