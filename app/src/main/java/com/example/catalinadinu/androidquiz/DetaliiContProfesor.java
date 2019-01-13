@@ -23,7 +23,7 @@ public class DetaliiContProfesor extends AppCompatActivity {
     private TextView tVPrenumeProf;
     private TextView tVEmailProf;
     private Button buttonStergeContProf;
-  private Button salveaza;
+    private Button salveaza;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class DetaliiContProfesor extends AppCompatActivity {
         tVPrenumeProf = findViewById(R.id.tVPrenumeProf);
         tVEmailProf = findViewById(R.id.tVEmailProf);
         buttonStergeContProf = findViewById(R.id.buttonStergeContProf);
-       salveaza = findViewById(R.id.txtProf);
+        salveaza = findViewById(R.id.txtProf);
 
         ContractBazaDate database=new ContractBazaDate(getApplicationContext());
         //aici crapa
@@ -66,10 +66,16 @@ public class DetaliiContProfesor extends AppCompatActivity {
             }
         });
 
+        String textViewSaveNumeProf = tVNumeProf.getText().toString();
+        String textViewSavePrenumeProf = tVPrenumeProf.getText().toString();
+        String textViewSaveEmailProf = tVEmailProf.getText().toString();
+        final String rezultatSave = textViewSaveNumeProf + "," + textViewSavePrenumeProf + "," +
+                textViewSaveEmailProf;
+
         salveaza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveFile("raport.txt", tVNumeProf.getText().toString());
+                saveFile("raport.txt", rezultatSave);
             }
         });
 

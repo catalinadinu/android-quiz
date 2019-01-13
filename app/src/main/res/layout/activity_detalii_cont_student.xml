@@ -103,4 +103,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tVEmailStud"
         app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/salvareStud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/txtSalvare"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeCont"
+        app:layout_constraintVertical_bias="0.454" />
+
 </android.support.constraint.ConstraintLayout>
