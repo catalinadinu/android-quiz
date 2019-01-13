@@ -131,4 +131,5 @@
     <string name="textViewPrenumeProf">Prenume: </string>
     <string name="textViewEmailProf">Email: </string>
     <string name="buttonStergeContProf">Sterge cont</string>
+    <string name="txtSalvare">Salveaza in fisier text</string>
 </resources>
