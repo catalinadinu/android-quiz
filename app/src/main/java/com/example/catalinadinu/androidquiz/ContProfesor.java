@@ -1,10 +1,18 @@
 package com.example.catalinadinu.androidquiz;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,7 +32,14 @@ import java.util.Arrays;
 import android.view.Menu;
 import android.widget.Toast;
 
+import static android.app.ActionBar.*;
+
 public class ContProfesor extends AppCompatActivity {
+
+    ImageView imagine;
+    Integer REQUEST_CAMERA = 1;
+    Integer SELECT_FILE = 0;
+    FloatingActionButton poza;
 
     private TextView numeUtilizator;
     private TextView codProfesor;
@@ -126,7 +141,65 @@ public class ContProfesor extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
+        imagine = (ImageView) findViewById(R.id.avatar);
+        poza = (FloatingActionButton) findViewById(R.id.poza);
+        poza.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                selectImage();
+            }
+        });
+
+
+
+    }
+
+    private void selectImage(){
+        final CharSequence[] items = {"CAMERA", "GALERY", "CANCEL"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(ContProfesor.this);
+        builder.setTitle("Adauga un avatar");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                 if(items[i].equals("CAMERA")){
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent, REQUEST_CAMERA);
+                 }
+                 else if(items[i].equals("GALERY")){
+                    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    intent.setType("image/*");
+                    startActivityForResult(intent.createChooser(intent, "SELECT FILE"),SELECT_FILE);
+
+                 }
+                 else if(items[i].equals("CANCEL")){
+                     dialog.dismiss();
+                 }
+            }
+        });
+
+        builder.show();
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == Activity.RESULT_OK)
+        {
+            if(requestCode == REQUEST_CAMERA){
+
+                Bundle bundle = data.getExtras();
+                final Bitmap bmp = (Bitmap) bundle.get("data");
+                imagine.setImageBitmap(bmp);
+
+            }else if(requestCode == SELECT_FILE){
+                Uri selectedImageUri = data.getData();
+                imagine.setImageURI(selectedImageUri);
+            }
+        }
     }
 
     @Override

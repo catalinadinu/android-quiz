@@ -99,6 +99,11 @@
     <string name="parolaNoua">Parola noua</string>
     <string name="deconectare">Deconectare</string>
     <string name="title_activity_maps">Map</string>
+    <string name="buttonSH">Salveaza datele</string>
+    <string name="buttonSD">Salveaza datele</string>
+    <string name="date"></string>
+    <string name="datee"></string>
+
     <string name="setari">Setari cont</string>
     <string name="editTextRaspunsDeschis">Raspuns</string>
     <string name="usersInfo">Aplicatia este folosita de %d utilizatori.</string>

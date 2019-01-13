@@ -2,8 +2,10 @@ package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +29,7 @@ public class ConectareStudent extends Activity {
     private TextView email;
     private TextView parola;
     private TextView cod;
+    private TextView datele;
     private Button conectareStud;
     private UtilizatorStudent utilizatorStudent;
     public static List<UtilizatorStudent> studentiConectare = new ArrayList<>();
@@ -43,6 +46,7 @@ public class ConectareStudent extends Activity {
 
         ConectareStudentiJSON cc = new ConectareStudentiJSON();
         cc.execute();
+        datele = findViewById(R.id.datee);
     }
 
     private class ConectareStudentiJSON extends AsyncTask<Void,Void,Void> {
@@ -100,6 +104,25 @@ public class ConectareStudent extends Activity {
             Toast.makeText(getApplicationContext(), "Fisierul JSON parsat!", Toast.LENGTH_SHORT).show();
         }
 
+
+    }
+
+
+    public void saveInfoo(View view){
+        SharedPreferences sharePref = getSharedPreferences("userinfo",Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharePref.edit();
+        editor.putString("email", email.getText().toString());
+        editor.putString("parola", parola.getText().toString());
+        editor.putString("cod", cod.getText().toString());
+        editor.apply();
+
+        Toast.makeText(this, "Date salvate!", Toast.LENGTH_LONG).show();
+        String email = sharePref.getString("email", "");
+        String parola = sharePref.getString("parola", "");
+        String cod = sharePref.getString("cod", "");
+
+        datele.setText(email + " "+ parola + " "+ cod);
 
     }
 
