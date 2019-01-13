@@ -4,35 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     tools:context=".DetaliiContProfesor">
 
     <TextView
         android:id="@+id/textViewNumeProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
         android:text="@string/textViewNumeProf"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrenumeProf"
-        app:layout_constraintEnd_toStartOf="@+id/tVNumeProf"
-        app:layout_constraintHorizontal_bias="0.391"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/detaliiContProf" />
 
     <TextView
         android:id="@+id/textViewPrenumeProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/textViewPrenumeProf"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmailProf"
-        app:layout_constraintEnd_toStartOf="@+id/tVPrenumeProf"
-        app:layout_constraintHorizontal_bias="0.302"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumeProf" />
 
@@ -40,11 +36,11 @@
         android:id="@+id/textViewEmailProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/textViewEmailProf"
-        app:layout_constraintEnd_toStartOf="@+id/tVEmailProf"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPrenumeProf" />
 
@@ -52,62 +48,75 @@
         android:id="@+id/tVNumeProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="144dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumeProf"
         app:layout_constraintTop_toBottomOf="@+id/detaliiContProf" />
 
     <TextView
         android:id="@+id/tVPrenumeProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/tVEmailProf"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tVNumeProf"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrenumeProf"
+        app:layout_constraintTop_toBottomOf="@+id/tVNumeProf" />
 
     <TextView
         android:id="@+id/tVEmailProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonStergeContProf"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewEmailProf" />
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/textViewEmailProf"
+        app:layout_constraintTop_toBottomOf="@+id/tVPrenumeProf" />
 
     <TextView
         android:id="@+id/detaliiContProf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="149dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/detaliiContProf"
-        app:layout_constraintBottom_toTopOf="@+id/tVNumeProf"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonStergeContProf"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="#0F194C"
+        android:fontFamily="casual"
         android:text="@string/buttonStergeContProf"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailProf" />
 
     <Button
         android:id="@+id/txtProf"
@@ -115,13 +124,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="#0F194C"
+        android:fontFamily="casual"
         android:text="@string/txtSalvare"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStergeContProf"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonStergeContProf" />
 </android.support.constraint.ConstraintLayout>

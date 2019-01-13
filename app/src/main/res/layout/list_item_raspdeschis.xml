@@ -3,20 +3,22 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    >
+    android:background="#F4FDFF">
 
     <TextView
         android:id="@+id/id"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
-        android:textColor="@color/colorPrimaryDark" />
+        android:fontFamily="casual"
+        android:textColor="#111E6C" />
 
     <TextView
         android:id="@+id/textIntrebare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#5d5d5d"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         android:textStyle="bold" />
 
     <EditText
@@ -25,6 +27,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/editTextRaspunsDeschis"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColorHint="#111E6C"
+        android:backgroundTint="#0F194C"/>
 
 </LinearLayout>
