@@ -17,4 +17,9 @@ public class setariContProfesor extends Activity {
     public void schimbaParola(View view){
         Toast.makeText(setariContProfesor.this,"Parola a fost modificată cu succes.", Toast.LENGTH_LONG).show();
     }
+
+    public void deconectare(View view){
+        Intent intentDeconectare = new Intent(setariContProfesor.this, MainActivity.class);
+        startActivityForResult(intentDeconectare, 0);
+    }
 }

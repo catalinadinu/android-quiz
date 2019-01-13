@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +14,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -83,6 +94,27 @@ public class MainActivity extends AppCompatActivity {
                 }
         });
 
+        final TextView messageTextView = findViewById(R.id.textView);
+        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference logRef = dbRef.child("logs");
+        logRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                long nbOfUsers = dataSnapshot.getChildrenCount();
+                messageTextView.setText(String.format(
+                        getResources().getString(R.string.usersInfo), nbOfUsers));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        String uniqueId = Settings.Secure.getString(MainActivity.this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        DatabaseReference phoneRef = logRef.child(uniqueId);
+        phoneRef.setValue(new Date());
+
         conectare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
     public void onRadioButtonClicked(View view)
     {

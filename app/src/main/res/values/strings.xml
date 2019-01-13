@@ -101,6 +101,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="setari">Setari cont</string>
     <string name="editTextRaspunsDeschis">Raspuns</string>
+    <string name="usersInfo">Aplicatia este folosita de %d utilizatori.</string>
     <string name="detaliiContStudent">Detalii cont</string>
     <string name="textViewDetaliiContStudent">Detalii cont</string>
     <string name="textViewNumeStud">Nume: </string>
