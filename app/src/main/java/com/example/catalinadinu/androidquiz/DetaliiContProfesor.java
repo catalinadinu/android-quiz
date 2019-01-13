@@ -84,13 +84,10 @@ public class DetaliiContProfesor extends AppCompatActivity {
       public void saveFile(String file, String text){
 
         try{
-              Log.d("kkkkkkkkk", "am ajuns aici");
+
               FileOutputStream fos = openFileOutput(file, Context.MODE_PRIVATE);
-              Log.d("rahat", "am ajuns aici");
               fos.write(text.getBytes());
-              Log.d("mata", "am ajuns aici");
               fos.close();
-              Log.d("flori", "am ajuns aici");
               Toast.makeText(DetaliiContProfesor.this, "Date salvate cu succes", Toast.LENGTH_SHORT).show();
           }catch(Exception ex){
 

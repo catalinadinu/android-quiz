@@ -9,13 +9,13 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MEDIA_CONTENT_CONTROL"
         tools:ignore="ProtectedPermissions" />
-
 
     <application
         android:allowBackup="true"
@@ -65,7 +65,8 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".DetaliiContProfesor" />
-        <activity android:name=".DetaliiContStudent"></activity>
+        <activity android:name=".DetaliiContStudent" />
+        <activity android:name=".QuizStudent"></activity>
     </application>
 
 </manifest>

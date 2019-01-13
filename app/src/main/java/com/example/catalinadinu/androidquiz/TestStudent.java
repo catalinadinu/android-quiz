@@ -90,8 +90,8 @@ public class TestStudent extends Activity {
     }
 
     public void butonSubmit(View view){
-        Intent intentSubmit = new Intent(TestStudent.this, FinalTest.class);
-        startActivityForResult(intentSubmit, 12);
+        Intent intentSubmit = new Intent(TestStudent.this, ContStudent.class);
+        startActivityForResult(intentSubmit, 6);
     }
 
 }

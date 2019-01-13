@@ -32,7 +32,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:onClick="butonSubmit"
-        android:text="@string/butonSubmit"
+        android:text="Mergi inapoi la cont"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:fontFamily="casual"

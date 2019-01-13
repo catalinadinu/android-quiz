@@ -207,8 +207,8 @@ public class ContStudent extends Activity {
             public void onClick(View v) {
                 String valoareSpinner = spinnerMaterie.getSelectedItem().toString();
                 if(!("".equals(valoareSpinner))){
-                    Intent intentIncepeTest = new Intent(ContStudent.this, TestStudent.class);
-                    startActivityForResult(intentIncepeTest, 7);}
+                    Intent intentIncepeTest = new Intent(ContStudent.this, QuizStudent.class);
+                    startActivityForResult(intentIncepeTest, 22);}
             }
         });
     }
