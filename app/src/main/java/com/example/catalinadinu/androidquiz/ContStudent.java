@@ -1,9 +1,15 @@
 package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -47,6 +54,10 @@ public class ContStudent extends Activity {
     private TextView codStud;
     private ListView listViewTesteStudent;
     private ImageButton setariContStudent;
+    ImageView imagine;
+    Integer REQUEST_CAMERA = 1;
+    Integer SELECT_FILE = 0;
+    FloatingActionButton poza;
     String prenumestudd;
     //String numeProf;
     String codstudd;
@@ -63,6 +74,7 @@ public class ContStudent extends Activity {
         spinnerMaterie = findViewById(R.id.id_spinnerMaterieS);
         listViewTesteStudent = findViewById(R.id.listViewTesteStudent);
         setariContStudent = findViewById(R.id.setariContStudent);
+
 
         //intent inregistrare
         if(getIntent().hasExtra("inregistrareStud"))
@@ -127,8 +139,63 @@ public class ContStudent extends Activity {
         spinnerMaterie.setAdapter(adaptor);
 
         //citesteJson();
+
+        imagine = (ImageView) findViewById(R.id.profil);
+        poza = (FloatingActionButton) findViewById(R.id.poza);
+        poza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectImage();
+            }
+        });
     }
 
+
+    private void selectImage(){
+        final CharSequence[] items = {"CAMERA", "GALERY", "CANCEL"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(ContStudent.this);
+        builder.setTitle("Adauga un avatar");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                if(items[i].equals("CAMERA")){
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent, REQUEST_CAMERA);
+                }
+                else if(items[i].equals("GALERY")){
+                    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    intent.setType("image/*");
+                    startActivityForResult(intent.createChooser(intent, "SELECT FILE"),SELECT_FILE);
+
+                }
+                else if(items[i].equals("CANCEL")){
+                    dialog.dismiss();
+                }
+            }
+        });
+
+        builder.show();
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == Activity.RESULT_OK)
+        {
+            if(requestCode == REQUEST_CAMERA){
+
+                Bundle bundle = data.getExtras();
+                final Bitmap bmp = (Bitmap) bundle.get("data");
+                imagine.setImageBitmap(bmp);
+
+            }else if(requestCode == SELECT_FILE){
+                Uri selectedImageUri = data.getData();
+                imagine.setImageURI(selectedImageUri);
+            }
+        }
+    }
 
     public void IncepeTest(View view)
     {
