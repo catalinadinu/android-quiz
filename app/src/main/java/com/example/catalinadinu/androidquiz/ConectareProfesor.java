@@ -2,7 +2,9 @@ package com.example.catalinadinu.androidquiz;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +23,7 @@ public class ConectareProfesor extends Activity {
     private TextView parolaProf;
     private TextView cod;
     private Button conectareProf;
+    private TextView date;
     private UtilizatorProfesor utilProf;
 
 
@@ -33,7 +36,7 @@ public class ConectareProfesor extends Activity {
         parolaProf =  findViewById(R.id.id_parolaProfConectare);
         cod = findViewById(R.id.id_codProfConectare);
         conectareProf = findViewById(R.id.id_butonConectare);
-
+        date = findViewById(R.id.date);
     }
 
     public void trimiteCodCont(){
@@ -42,6 +45,26 @@ public class ConectareProfesor extends Activity {
         Intent intent = new Intent(ConectareProfesor.this, ContProfesor.class);
         intent.putExtra("COD", codProf);
         startActivity(intent);
+    }
+
+
+
+    public void saveInfo(View view){
+        SharedPreferences sharePref = getSharedPreferences("userinfo",Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharePref.edit();
+        editor.putString("email", emailProf.getText().toString());
+        editor.putString("parola", parolaProf.getText().toString());
+        editor.putString("cod", cod.getText().toString());
+        editor.apply();
+
+        Toast.makeText(this, "Date salvate!", Toast.LENGTH_LONG).show();
+        String email = sharePref.getString("email", "");
+        String parola = sharePref.getString("parola", "");
+        String cod = sharePref.getString("cod", "");
+
+        date.setText(email + " "+ parola + " "+ cod);
+
     }
 
 //    public void verificainBD(){

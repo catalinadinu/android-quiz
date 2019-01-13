@@ -100,4 +100,9 @@
     <string name="deconectare">Deconectare</string>
     <string name="setari">Setări cont</string>
     <string name="title_activity_maps">Map</string>
+    <string name="buttonSH">Salveaza datele</string>
+    <string name="buttonSD">Salveaza datele</string>
+    <string name="date"></string>
+    <string name="datee"></string>
+
 </resources>

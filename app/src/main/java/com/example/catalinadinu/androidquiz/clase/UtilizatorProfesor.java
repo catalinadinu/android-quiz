@@ -4,12 +4,12 @@ package com.example.catalinadinu.androidquiz.clase;
 import java.io.Serializable;
 
 public class UtilizatorProfesor implements Serializable {
-    private String nume;
-    private String prenume;
-    private String email;
-    private String parola;
-    private String confirmaParola;
-    private String cod;
+    public String nume;
+    public String prenume;
+    public String email;
+    public String parola;
+    public String confirmaParola;
+    public String cod;
 
     public UtilizatorProfesor() {
     }
