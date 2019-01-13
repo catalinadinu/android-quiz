@@ -80,28 +80,28 @@
             app:layout_constraintTop_toBottomOf="@+id/intrebare1P">
 
             <RadioButton
-                android:id="@+id/radioButton1.1"
+                android:id="@+id/radioBtn11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn11" />
 
             <RadioButton
-                android:id="@+id/radioButton1.2"
+                android:id="@+id/radioBtn12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn12" />
 
             <RadioButton
-                android:id="@+id/radioButton1.3"
+                android:id="@+id/radioBtn13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn13" />
         </RadioGroup>
 
         <TextView
@@ -130,28 +130,28 @@
             app:layout_constraintTop_toBottomOf="@+id/intrebare2P">
 
             <RadioButton
-                android:id="@+id/radioButton2.1"
+                android:id="@+id/radioBtn21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn21" />
 
             <RadioButton
-                android:id="@+id/radioButton2.2"
+                android:id="@+id/radioBtn22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn22" />
 
             <RadioButton
-                android:id="@+id/radioButton2.3"
+                android:id="@+id/radioBtn23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#0F194C"
-                android:text="RadioButton" />
+                android:text="@string/radioBtn23" />
         </RadioGroup>
 
         <TextView
@@ -169,46 +169,46 @@
             app:layout_constraintTop_toBottomOf="@+id/radioGroupI2" />
 
         <CheckBox
-            android:id="@+id/checkBox3.1"
+            android:id="@+id/checkBox31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="5dp"
-            android:text="CheckBox"
+            android:layout_marginEnd="8dp"
             android:buttonTint="#0F194C"
+            android:text="@string/checkBox31"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/intrebare3P" />
 
-    <CheckBox
-        android:id="@+id/checkBox3.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="CheckBox"
-        android:buttonTint="#0F194C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3.1" />
+        <CheckBox
+            android:id="@+id/checkBox32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:buttonTint="#0F194C"
+            android:text="@string/checkBox32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox31" />
 
-    <CheckBox
-        android:id="@+id/checkBox3.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="CheckBox"
-        android:buttonTint="#0F194C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3.2" />
+        <CheckBox
+            android:id="@+id/checkBox33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:buttonTint="#0F194C"
+            android:text="@string/checkBox33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox32" />
 
         <TextView
             android:id="@+id/intrebare4P"
@@ -222,63 +222,64 @@
             android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox3.3" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox33" />
 
         <CheckBox
-            android:id="@+id/checkBox4.1"
+            android:id="@+id/checkBox41"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="CheckBox"
             android:buttonTint="#0F194C"
+            android:text="@string/checkBox41"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/intrebare4P" />
 
-    <CheckBox
-        android:id="@+id/checkBox4.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="CheckBox"
-        android:buttonTint="#0F194C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4.1" />
+        <CheckBox
+            android:id="@+id/checkBox42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:buttonTint="#0F194C"
+            android:text="@string/checkBox42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox41" />
 
-    <CheckBox
-        android:id="@+id/checkBox4.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="CheckBox"
-        android:buttonTint="#0F194C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4.2" />
+        <CheckBox
+            android:id="@+id/checkBox43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:buttonTint="#0F194C"
+            android:text="@string/checkBox43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox42" />
 
         <TextView
             android:id="@+id/intrebare5P"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/intrebare5P"
             android:fontFamily="casual"
+            android:text="@string/intrebare5P"
             android:textColor="#111E6C"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4.3" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBox43" />
 
         <TextView
             android:id="@+id/raspunsI5"
@@ -287,14 +288,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/raspunsI5"
+            android:layout_marginBottom="1dp"
             android:fontFamily="casual"
+            android:text="@string/raspunsI5"
             android:textColor="#111E6C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/intrebare5P" />
+            app:layout_constraintTop_toBottomOf="@+id/intrebare5P"
+            app:layout_constraintVertical_bias="0.52" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

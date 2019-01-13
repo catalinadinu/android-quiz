@@ -133,7 +133,10 @@ public class ContStudent extends Activity {
 
         List<String> materii = new ArrayList<>();
         materii.add("BTI");
-        //materii.add("POO");
+        materii.add("POO");
+        materii.add("JAVA");
+        materii.add("PAW");
+        materii.add("SDD");
 
         ArrayAdapter<String> adaptor = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, materii);
         spinnerMaterie.setAdapter(adaptor);
