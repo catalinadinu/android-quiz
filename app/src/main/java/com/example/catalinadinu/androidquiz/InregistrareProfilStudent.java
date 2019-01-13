@@ -45,6 +45,8 @@ public class InregistrareProfilStudent extends AppCompatActivity {
         creeazaCont = findViewById(R.id.id_butonInregistreazaStud);
         studentContractBD = new ContractBazaDate(this);
 
+
+
     }
 
 
@@ -110,6 +112,10 @@ public class InregistrareProfilStudent extends AppCompatActivity {
                             startActivityForResult(intentConectare, 6);
                             trimiteNume();
                             trimiteEmailStudent();
+
+                            Intent intentInreg = new Intent(InregistrareProfilStudent.this, ContStudent.class);
+                            intentInreg.putExtra("inregistrareStud", "inregistrareStud");
+                            startActivity(intentInreg);
                         }
                     }
                     else {

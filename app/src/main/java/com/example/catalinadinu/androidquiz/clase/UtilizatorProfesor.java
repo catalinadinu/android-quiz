@@ -9,6 +9,15 @@ public class UtilizatorProfesor implements Serializable {
     private String email;
     private String parola;
     private String confirmaParola;
+
+    public String getCod() {
+        return cod;
+    }
+
+    public void setCod(String cod) {
+        this.cod = cod;
+    }
+
     private String cod;
 
     public UtilizatorProfesor(String email) {
@@ -67,6 +76,16 @@ public class UtilizatorProfesor implements Serializable {
     public UtilizatorProfesor(String nume, String prenume) {
         this.nume = nume;
         this.prenume = prenume;
+    }
+
+    public String afisareConectare(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(email);
+        sb.append(" ");
+        sb.append(parola);
+        sb.append(" ");
+        sb.append(cod);
+        return sb.toString();
     }
 
     @Override

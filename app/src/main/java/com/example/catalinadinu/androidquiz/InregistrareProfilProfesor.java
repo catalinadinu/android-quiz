@@ -51,13 +51,14 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
 
     public void trimiteNume() {
         //intent implicit pentru a transfera parametrii
-        //String last = nume.getText().toString();
         String first = prenume.getText().toString();
 
-        Intent intent = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
-        intent.putExtra("PRENUME", first);
-        //intent.putExtra("NUME", last);
-        startActivity(intent);
+        Intent intent1 = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+        intent1.putExtra("PRENUME", first);
+        startActivity(intent1);
+        Intent intentInreg = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
+        intentInreg.putExtra("inregistrare", "inregistrare");
+        startActivity(intentInreg);
     }
 
     public void trimiteEmailProfesor(){
@@ -113,6 +114,8 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
                         startActivityForResult(intentConectare, 5);
                         trimiteNume();
                         trimiteEmailProfesor();
+
+
                     }
                 }
                 else {

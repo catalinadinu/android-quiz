@@ -33,6 +33,7 @@ public class ContProfesor extends AppCompatActivity {
     private Button feedbackk;
     private ListView listaQuiz;
     private TextView hintIntroducereCod;
+    private ImageButton setariContProfesor;
 
     String prenumeProf;
 //    String numeProf;
@@ -51,6 +52,34 @@ public class ContProfesor extends AppCompatActivity {
         feedbackk = findViewById(R.id.feedback);
         listaQuiz = findViewById(R.id.listaQuizProf);
         hintIntroducereCod = findViewById(R.id.hintIntroducereCod);
+        setariContProfesor = findViewById(R.id.setariContProfesor);
+
+        //transfer
+        if(getIntent().hasExtra("COD")){
+            codproff = getIntent().getExtras().getString("COD");
+            codProfesor.setText(codproff);
+        }
+        else if (getIntent().hasExtra("PRENUME")){
+            prenumeProf = getIntent().getExtras().getString("PRENUME");
+            //numeProf = getIntent().getExtras().getString("NUME");
+            numeUtilizator.setText(prenumeProf );//+ " " + numeProf);
+        }
+
+        //intent inregistrare
+        if(getIntent().hasExtra("inregistrare"))
+        {
+            setariContProfesor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intentAd = new Intent(ContProfesor.this, setariContProfesor.class);
+                    startActivityForResult(intentAd, 18);
+                }
+            });
+        }
+        else {
+            setariContProfesor.setVisibility(View.GONE);
+        }
+
 
         //transfer
         if(getIntent().hasExtra("COD")){
@@ -95,6 +124,9 @@ public class ContProfesor extends AppCompatActivity {
 
         //stops the keyboard popup until you press the textview
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+
+
     }
 
     @Override
@@ -159,9 +191,8 @@ public class ContProfesor extends AppCompatActivity {
         startActivityForResult(intentFeedback, 10);
     }
 
-    public void setariContProfesor(View view){
-        Intent intentAd = new Intent(ContProfesor.this, setariContProfesor.class);
-        startActivityForResult(intentAd, 18);
-    }
+//    public void setariContProfesor(View view){
+//
+//    }
 
 }

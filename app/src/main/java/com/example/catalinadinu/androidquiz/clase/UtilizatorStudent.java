@@ -83,6 +83,16 @@ public class UtilizatorStudent implements Serializable {
         this.confirmaParola = confirmaParola;
     }
 
+    public String afisareConectare(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(email);
+        sb.append(" ");
+        sb.append(parola);
+        sb.append(" ");
+        sb.append(codStudent);
+        return sb.toString();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

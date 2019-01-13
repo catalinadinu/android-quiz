@@ -11,6 +11,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -45,6 +46,7 @@ public class ContStudent extends Activity {
     private TextView numeStud;
     private TextView codStud;
     private ListView listViewTesteStudent;
+    private ImageButton setariContStudent;
     String prenumestudd;
     //String numeProf;
     String codstudd;
@@ -60,19 +62,22 @@ public class ContStudent extends Activity {
         progressBar = findViewById(R.id.progressBar);
         spinnerMaterie = findViewById(R.id.id_spinnerMaterieS);
         listViewTesteStudent = findViewById(R.id.listViewTesteStudent);
-//        spinnerMaterie.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//                String item = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(parent.getContext(), "Selectat: " + item, Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
+        setariContStudent = findViewById(R.id.setariContStudent);
+
+        //intent inregistrare
+        if(getIntent().hasExtra("inregistrareStud"))
+        {
+            setariContStudent.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intentAd = new Intent(ContStudent.this, setariContStudent.class);
+                    startActivityForResult(intentAd, 19);
+                }
+            });
+        }
+        else {
+            setariContStudent.setVisibility(View.GONE);
+        }
 
         //listview - adaptor personalizat
         Test[] testeStudent = new Test[]{
@@ -124,46 +129,6 @@ public class ContStudent extends Activity {
         //citesteJson();
     }
 
-//    public void citesteJson() {
-//        Log.d("intra", "aici intra");
-//        List<Materie> materii = new ArrayList<>();
-//        Log.d("intra2", "si aici intra");
-//        String address = "https://api.myjson.com/bins/10l6xq";
-//        HttpURLConnection connection = null;
-//            try {
-//                URL url = new URL(address);
-//                connection = (HttpURLConnection) url.openConnection();
-//                InputStream inputStream = connection.getInputStream();
-//                BufferedReader reader =
-//                        new BufferedReader(new InputStreamReader(inputStream));
-//                StringBuilder stringBuilder = new StringBuilder();
-//                String line = null;
-//                while ((line = reader.readLine()) != null) {
-//                    stringBuilder.append(line);
-//                }
-//                String result = stringBuilder.toString();
-//                Log.d("JSON", result);
-//                Materie materie = new Materie();
-//                JSONObject jsonObject = new JSONObject(result);
-//                materie.denumire = jsonObject.getString("denumire");
-//                materie.an = jsonObject.getString("an");
-//                materie.tipExaminare = jsonObject.getString("tipExaminare");
-//                materie.semestru = jsonObject.getString("semestru");
-//                materii.add(materie);
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            } finally {
-//                if (connection != null) {
-//                    connection.disconnect();
-//                }
-//            }
-//
-//        ArrayAdapter<Materie> adaptor = new ArrayAdapter<>(ContStudent.this, R.layout.support_simple_spinner_dropdown_item, materii);
-//        spinnerMaterie.setAdapter(adaptor);
-//    }
-
 
     public void IncepeTest(View view)
     {
@@ -178,59 +143,4 @@ public class ContStudent extends Activity {
         });
     }
 
-    public void setariContStudent(View view){
-        Intent intentAd = new Intent(ContStudent.this, setariContStudent.class);
-        startActivityForResult(intentAd, 19);
-    }
-
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if(item.getItemId() == R.id.schimbaParola)
-//        {
-//            Intent intentSchimbareParola = new Intent(ContStudent.this, setariContStudent.class);
-//            startActivityForResult(intentSchimbareParola, 18);
-//        }
-//        else if(item.getItemId() == R.id.deconectare){
-//            Intent intentDeconectare = new Intent(ContStudent.this, MainActivity.class);
-//            startActivityForResult(intentDeconectare, 0);
-//        }
-//        else{
-//            return super.onOptionsItemSelected(item);
-//        }
-//        return true;
-//    }
-
-    //clasa cu metode asincrone in care citim json-ul si adaugam materiilor citite in spinner
-//    class MaterieTest extends AsyncTask<String, Integer, Materie> { //param, progress, result
-//
-//        @Override
-//        protected void onPreExecute() {
-//            if(progressBar != null) {
-//                progressBar.setVisibility(View.VISIBLE);
-//            }
-//        }
-//
-//
-//        @Override
-//        protected Materie doInBackground(String... strings){
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Materie materie) {
-//            if(progressBar != null) {
-//                progressBar.setVisibility(View.INVISIBLE);
-//            }
-//
-//
-//        }
-//    }
 }
