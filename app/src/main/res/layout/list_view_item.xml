@@ -3,6 +3,7 @@
     android:id="@+id/gridView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="#F4FDFF"
     android:orientation="vertical">
 
     <TextView
@@ -11,6 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="0"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         android:text="TextView" />
 
     <TextView
@@ -19,6 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="3"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         android:text="TextView" />
 
     <TextView
@@ -27,5 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="1"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         android:text="TextView" />
 </GridLayout>

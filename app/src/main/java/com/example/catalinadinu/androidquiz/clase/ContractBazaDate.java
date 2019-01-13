@@ -1,5 +1,6 @@
 package com.example.catalinadinu.androidquiz.clase;
 
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -12,7 +13,7 @@ import com.example.catalinadinu.androidquiz.InregistrareProfilProfesor;
 import com.example.catalinadinu.androidquiz.InregistrareProfilStudent;
 
 public class ContractBazaDate extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "databaseQuiz.sqLite.db";
+    public static final String DATABASE_NAME = "databaseAndroidQuiz.sqLite.db";
     private static final int DB_VERS = 1;
 
     private static final String TAG = ContractBazaDate.class.getSimpleName();
@@ -35,36 +36,37 @@ public class ContractBazaDate extends SQLiteOpenHelper {
         StudentBD.onUpgrade(db, oldVersion, newVersion);
     }
 
-    public void insertProf () {
+    //INSERT
+    public long insertProf () {
         SQLiteDatabase db = this.getWritableDatabase(); //Create and/or open a database that will be used for reading and writing.
-
+        long result = 0;
         for(UtilizatorProfesor profesor : InregistrareProfilProfesor.profesori){
             ContentValues cv = new ContentValues(); // Creates an empty set of values using the default initial size
             cv.put(ProfesorBD.COLUMN_LAST_NAME, profesor.getNume());
             cv.put(ProfesorBD.COLUMN_FIRST_NAME, profesor.getPrenume());
             cv.put(ProfesorBD.COLUMN_EMAIL, profesor.getEmail());
             cv.put(ProfesorBD.COLUMN_PASSWORD, profesor.getParola());
-            long result = db.insert(ProfesorBD.TABLE_NAME, null, cv);
+            result = db.insert(ProfesorBD.TABLE_NAME, null, cv);
 
-            Log.d("CACA", "Inserted value: " + result);
-            Toast.makeText(lContext, "Inserted value:" + result, Toast.LENGTH_LONG).show();
+            //Toast.makeText(lContext, "Index valoare adaugata in tabela:" + result, Toast.LENGTH_LONG).show();
         }
+        return result;
     }
 
-    public void insertStud () {
+    public long insertStud () {
         SQLiteDatabase db = this.getWritableDatabase(); //Create and/or open a database that will be used for reading and writing.
-
+        long result=0;
         for(UtilizatorStudent student : InregistrareProfilStudent.studenti){
             ContentValues cv = new ContentValues(); // Creates an empty set of values using the default initial size
             cv.put(StudentBD.COLUMN_LAST_NAME, student.getNume());
             cv.put(StudentBD.COLUMN_FIRST_NAME, student.getPrenume());
             cv.put(StudentBD.COLUMN_EMAIL, student.getEmail());
             cv.put(StudentBD.COLUMN_PASSWORD, student.getParola());
-            long result = db.insert(StudentBD.TABLE_NAME, null, cv);
+            result = db.insert(StudentBD.TABLE_NAME, null, cv);
+            //Toast.makeText(lContext, "Index valoare adaugata in tabela:" + result, Toast.LENGTH_LONG).show();
 
-            //Log.d("CACA", "Inserted value: " + result);
-            Toast.makeText(lContext, "Inserted value:" + result, Toast.LENGTH_LONG).show();
         }
+        return result;
     }
 
     public Cursor getProfDataCursor () // pointer / sort of a query
@@ -75,34 +77,73 @@ public class ContractBazaDate extends SQLiteOpenHelper {
     }
 
 
+    //SELECT
+    public Cursor getInregistrareDataStudCursor (String email) // pointer / sort of a query
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] array=new String[]{email};
+        Cursor cursor = db.rawQuery(" SELECT email, parola FROM studenti WHERE email=?",array);
+        return cursor;
+    }
+
     public Cursor getInregistrareDataProfCursor (String email) // pointer / sort of a query
     {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] array=new String[]{email};
-        Cursor cursor = db.rawQuery("SELECT email, parola FROM profesori WHERE email=?",array);
+        Cursor cursor = db.rawQuery(" SELECT email, parola FROM profesori WHERE email=?",array);
         return cursor;
     }
 
-    public Cursor getStudDataCursor ()
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(StudentBD.TABLE_NAME, null, null, null, null, null, null);
+    public Cursor getStudentBDDataCursor(String email){
+        SQLiteDatabase db=this.getReadableDatabase();
+        String[] array = new String[]{email};
+        Cursor cursor = db.rawQuery(" SELECT nume, prenume, email FROM studenti WHERE email=?",array);
         return cursor;
     }
 
-    public void deleteProfItembyId (Long id)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        String[] args = new String[]{id.toString()};
-        int result = db.delete(ProfesorBD.TABLE_NAME, "_id=? ", args);
-        Log.d(TAG, "Item Deleted");
+    public Cursor getProfBDDataCursor(String email){
+        SQLiteDatabase db=this.getReadableDatabase();
+        String[] array = new String[]{email};
+        Cursor cursor = db.rawQuery(" SELECT nume, prenume, email FROM profesori WHERE email=?",array);
+        return cursor;
     }
 
-    public void deleteStudItembyId (Long id)
+
+
+    //DELETE
+    public void deleteProfItembyPK (String email)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] args = new String[]{id.toString()};
-        int result = db.delete(StudentBD.TABLE_NAME, "_id=? ", args);
-        Log.d(TAG, "Item Deleted");
+        String[] array = new String[]{email};
+        int result = db.delete(ProfesorBD.TABLE_NAME, "email=? ", array);
+        //Log.d(TAG, "Item Deleted");
+    }
+
+    public void deleteStudItembyPK (String email)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] array = new String[]{email};
+        int result = db.delete(StudentBD.TABLE_NAME, "email=? ", array);
+        //Log.d(TAG, "Item Deleted");
+    }
+
+
+    //UPDATE
+    public void updateParolaStudent(String email,String parola)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String[] array = new String[]{email};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("parola",parola);
+        int result = db.update(StudentBD.TABLE_NAME, contentValues,"email=?",array);
+    }
+
+    public void updateParolaProfesor(String email,String parola)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String[] array = new String[]{email};
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("parola",parola);
+        int result = db.update(ProfesorBD.TABLE_NAME, contentValues,"email=?",array);
     }
 }

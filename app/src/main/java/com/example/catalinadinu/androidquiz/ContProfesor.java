@@ -159,4 +159,9 @@ public class ContProfesor extends AppCompatActivity {
         startActivityForResult(intentFeedback, 10);
     }
 
+    public void setariContProfesor(View view){
+        Intent intentAd = new Intent(ContProfesor.this, setariContProfesor.class);
+        startActivityForResult(intentAd, 18);
+    }
+
 }

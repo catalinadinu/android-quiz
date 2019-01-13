@@ -4,24 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     tools:context=".setariContStudent">
 
     <Button
         android:id="@+id/schimbaParolaStudent"
-        android:layout_width="wrap_content"
+        android:layout_width="147dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="schimbaParola"
+        android:layout_marginEnd="3dp"
+        android:background="#0F194C"
+        android:fontFamily="casual"
         android:text="@string/schimbaParola"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parolaNouaStudent" />
 
     <EditText
-        android:id="@+id/parolaVecheProfesor"
+        android:id="@+id/parolaVecheStudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,6 +33,8 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/parolaVeche"
+        android:textColorHint="#111E6C"
+        android:backgroundTint="#0F194C"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -44,11 +50,13 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/parolaNoua"
+        android:textColorHint="#111E6C"
+        android:backgroundTint="#0F194C"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parolaVecheProfesor" />
+        app:layout_constraintTop_toBottomOf="@+id/parolaVecheStudent" />
 
     <TextView
         android:id="@+id/titluSetariStudent"
@@ -57,22 +65,44 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
         android:text="@string/setari"
+        android:textColor="#111E6C"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/deconectareStudent"
-        android:layout_width="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="#0F194C"
+        android:fontFamily="casual"
+        android:onClick="deconectare"
+        android:text="@string/deconectare"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/detaliiContStudent"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="deconectare"
-        android:text="@string/deconectare"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="detaliiCont"
+        android:text="@string/detaliiContStudent"
+        app:layout_constraintBottom_toTopOf="@+id/deconectareStudent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/schimbaParolaStudent" />

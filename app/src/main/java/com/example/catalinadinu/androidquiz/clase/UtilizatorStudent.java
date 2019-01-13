@@ -5,17 +5,20 @@ import java.io.Serializable;
 public class UtilizatorStudent implements Serializable {
     private String nume;
     private String prenume;
+    private String email;
+    private String parola;
+    private String confirmaParola;
+    private String codStudent;
+
+    public UtilizatorStudent(String email) {
+        this.email = email;
+    }
 
     public UtilizatorStudent(String email, String parola, String codStudent) {
         this.email = email;
         this.parola = parola;
         this.codStudent = codStudent;
     }
-
-    private String email;
-    private String parola;
-    private String confirmaParola;
-    private String codStudent;
 
     public String getCodStudent() {
         return codStudent;

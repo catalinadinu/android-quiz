@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4FDFF"
     tools:context=".FinalTest">
 
     <TextView
@@ -14,6 +15,10 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:text="@string/terminareTest"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +31,8 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:text="@string/punctajFinalTest"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terminareTest" />
@@ -38,6 +45,8 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:text="@string/nrRaspCorecteTest"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +61,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/dificultateTest"
+        android:fontFamily="casual"
+        android:textColor="#111E6C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -81,6 +92,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:progressTint="#111E6C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/butonSubmitFinalizareTest"
         app:layout_constraintHorizontal_bias="1.0"

@@ -4,7 +4,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class StudentBD {
     public static final String TABLE_NAME = "studenti"; // table name
-    public static final String COLUMN_ID = "_id"; // attribute --- also primary key
+   // public static final String COLUMN_ID = "_id"; // attribute --- also primary key
     public static final String COLUMN_LAST_NAME = "nume"; // attribute
     public static final String COLUMN_FIRST_NAME = "prenume"; // attribute
     public static final String COLUMN_EMAIL = "email"; // attribute
@@ -12,10 +12,10 @@ public class StudentBD {
 
     private static final String TABLE_CREATE = "create table "
             + TABLE_NAME
-            + "(" + COLUMN_ID + " integer primary key autoincrement, "
+            + "("
             + COLUMN_LAST_NAME + " text not null, "
             + COLUMN_FIRST_NAME + " text not null, "
-            + COLUMN_EMAIL + " text not null, "
+            + COLUMN_EMAIL + " text primary key not null, "
             + COLUMN_PASSWORD + " text not null);";
 
 
