@@ -8,6 +8,12 @@ public class Intrebare {
     private ArrayList<String> raspunsuri;
     private Integer raspunsCorect;
 
+    public Intrebare(Integer id, String textIntrebare, ArrayList<String> raspunsuri) {
+        this.id = id;
+        this.textIntrebare = textIntrebare;
+        this.raspunsuri = raspunsuri;
+    }
+
     public Intrebare(Integer id, String textIntrebare, ArrayList<String> raspunsuri, Integer raspunsCorect) {
         this.id = id;
         this.textIntrebare = textIntrebare;

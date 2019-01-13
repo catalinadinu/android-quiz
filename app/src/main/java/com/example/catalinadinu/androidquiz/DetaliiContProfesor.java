@@ -1,9 +1,11 @@
 package com.example.catalinadinu.androidquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,12 +15,15 @@ import com.example.catalinadinu.androidquiz.clase.ContractBazaDate;
 import com.example.catalinadinu.androidquiz.clase.ProfesorBD;
 import com.example.catalinadinu.androidquiz.clase.StudentBD;
 
+import java.io.FileOutputStream;
+
 public class DetaliiContProfesor extends AppCompatActivity {
 
     private TextView tVNumeProf;
     private TextView tVPrenumeProf;
     private TextView tVEmailProf;
     private Button buttonStergeContProf;
+    private Button salveaza;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class DetaliiContProfesor extends AppCompatActivity {
         tVPrenumeProf = findViewById(R.id.tVPrenumeProf);
         tVEmailProf = findViewById(R.id.tVEmailProf);
         buttonStergeContProf = findViewById(R.id.buttonStergeContProf);
+        salveaza = findViewById(R.id.txtProf);
 
         ContractBazaDate database=new ContractBazaDate(getApplicationContext());
         //aici crapa
@@ -60,5 +66,37 @@ public class DetaliiContProfesor extends AppCompatActivity {
             }
         });
 
+        String textViewSaveNumeProf = tVNumeProf.getText().toString();
+        String textViewSavePrenumeProf = tVPrenumeProf.getText().toString();
+        String textViewSaveEmailProf = tVEmailProf.getText().toString();
+        final String rezultatSave = textViewSaveNumeProf + "," + textViewSavePrenumeProf + "," +
+                textViewSaveEmailProf;
+
+        salveaza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveFile("raport.txt", rezultatSave);
+            }
+        });
+
     }
+
+      public void saveFile(String file, String text){
+
+        try{
+              Log.d("kkkkkkkkk", "am ajuns aici");
+              FileOutputStream fos = openFileOutput(file, Context.MODE_PRIVATE);
+              Log.d("rahat", "am ajuns aici");
+              fos.write(text.getBytes());
+              Log.d("mata", "am ajuns aici");
+              fos.close();
+              Log.d("flori", "am ajuns aici");
+              Toast.makeText(DetaliiContProfesor.this, "Date salvate cu succes", Toast.LENGTH_SHORT).show();
+          }catch(Exception ex){
+
+              ex.printStackTrace();
+              Toast.makeText(DetaliiContProfesor.this, "Eroare la salvare in fisier", Toast.LENGTH_SHORT).show();
+          }
+
+      }
 }

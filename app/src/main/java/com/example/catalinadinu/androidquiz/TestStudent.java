@@ -49,16 +49,41 @@ public class TestStudent extends Activity {
         listViewIntrebari = findViewById(R.id.listViewIntrebari);
         butonSubmit = findViewById(R.id.butonSubmit);
 
-        ArrayList<String> raspunsuri = new ArrayList<>();
-        raspunsuri.add("caca");
-        raspunsuri.add("bine");
-        raspunsuri.add("nustu");
+        ArrayList<String> raspunsuri1 = new ArrayList<>();
+        raspunsuri1.add("o clasă poate implementa mai multe interfețe, însă poate extinde o singură clasă abstractă");
+        raspunsuri1.add("o clasă abstractă are cel puțin o metodă abstractă");
+        raspunsuri1.add("în interfețe și clase abstracte nu pot fi definite metode statice");
 
+
+        ArrayList<String> raspunsuri2 = new ArrayList<>();
+        raspunsuri2.add("expunerea unei interfețe high-level de lucru cu obiectul");
+        raspunsuri2.add("posibilitatea suprascrierii (overriding) metodelor");
+        raspunsuri2.add("construirea de obiecte complexe și ascunderea modului lor de funcționare");
+
+        ArrayList<String> raspunsuri3 = new ArrayList<>();
+        raspunsuri3.add("List<Integer> list = new List<Integer>()");
+        raspunsuri3.add("ArrayList<Integer> list = new List<Integer>()");
+        raspunsuri3.add("List<Integer> list = new ArrayList<Integer>()");
+
+
+        ArrayList<String> raspunsuri4 = new ArrayList<>();
+        raspunsuri4.add("public boolean equals(Object t) / public int equals(Test t)");
+        raspunsuri4.add("public Boolean equals (Object t) / public int equals (Object b)");
+        raspunsuri4.add("boolean equals(Object o) / public boolean equals(Test t)");
+
+        ArrayList<String> raspunsuri5 = new ArrayList<>();
+        raspunsuri5.add("Object, String");
+        raspunsuri5.add("Integer, String");
+        raspunsuri5.add("public class Test { private final int x = 3 };");
 
         ArrayList<Intrebare> intrebari = new ArrayList<>();
-        intrebari.add(new Intrebare(1, "Cmf", raspunsuri, 1));
-        intrebari.add(new Intrebare(2, "Cf", raspunsuri, 2));
-
+        intrebari.add(new Intrebare(1, "Care afirmatie este corecta?", raspunsuri1));
+        intrebari.add(new Intrebare(2, "Care dintre urmatoarele variante nu defineste incapsularea?", raspunsuri2));
+        intrebari.add(new Intrebare(3, "Care declaratie este corecta?", raspunsuri3));
+        intrebari.add(new Intrebare(4, "Care combinație reprezintă, într-o clasă pe " +
+                "nume Test, o suprascriere, respectiv o supraîncărcare validă " +
+                "(overriding și overloading) pentru metoda equals din java.lang.Object??", raspunsuri4));
+        intrebari.add(new Intrebare(5, "Care dintre următoarele clase sunt imutabile?", raspunsuri5));
 
         IntrebariAdaptorPersonalizat adaptor = new IntrebariAdaptorPersonalizat(getApplicationContext(), intrebari);
         listViewIntrebari.setAdapter(adaptor);

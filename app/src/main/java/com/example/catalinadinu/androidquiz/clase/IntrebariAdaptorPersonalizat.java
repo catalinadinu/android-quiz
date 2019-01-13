@@ -53,7 +53,7 @@ public class IntrebariAdaptorPersonalizat extends BaseAdapter {
         TextView rasp1=listView.findViewById(R.id.raspuns1);
         TextView rasp2=listView.findViewById(R.id.raspuns2);
         TextView rasp3=listView.findViewById(R.id.raspuns3);
-        TextView corect=listView.findViewById(R.id.raspunsCorect);
+        //TextView corect=listView.findViewById(R.id.raspunsCorect);
 
         final Intrebare intrebare=(Intrebare) getItem(position);
 
@@ -63,18 +63,18 @@ public class IntrebariAdaptorPersonalizat extends BaseAdapter {
         rasp2.setText("b:"+intrebare.getRaspuns(1));
         rasp3.setText("c:"+intrebare.getRaspuns(2));
 
-        if(intrebare.getRaspunsCorect()==0)
-        {
-            corect.setText("Raspunsul corect este A");
-        }
-        else if (intrebare.getRaspunsCorect()==1)
-        {
-            corect.setText("Raspunsul corect este B");
-        }
-        else if (intrebare.getRaspunsCorect()==2)
-        {
-            corect.setText("Raspunsul corect este C");
-        }
+//        if(intrebare.getRaspunsCorect()==0)
+//        {
+//            corect.setText("Raspunsul corect este A");
+//        }
+//        else if (intrebare.getRaspunsCorect()==1)
+//        {
+//            corect.setText("Raspunsul corect este B");
+//        }
+//        else if (intrebare.getRaspunsCorect()==2)
+//        {
+//            corect.setText("Raspunsul corect este C");
+//        }
 
         return listView;
     }
