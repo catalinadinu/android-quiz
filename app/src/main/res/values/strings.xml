@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">AndroidQuiz</string>
+    <string name="TVversiune">Versiune: 1.0</string>
     <string name="id_titlu">Bine ai venit!</string>
     <string name="id_conectare">Conectare</string>
-    <string name="id_inregistrare">Înregistrare</string>
+    <string name="id_inregistrare">Inregistrare</string>
     <string name="id_numeProfI">Nume</string>
     <string name="id_prenumeProfI">Prenume</string>
     <string name="id_numeStudI">Nume</string>
@@ -24,8 +25,8 @@
     <string name="id_butonConectare">Conectare</string>
     <string name="id_codProfConectare">Cod</string>
     <string name="profilMain">Selecteaza profilul!</string>
-    <string name="inregistrareProfilProf">Înregistrare profil profesor</string>
-    <string name="inregistrarePrStud">Înregistrare profil student</string>
+    <string name="inregistrareProfilProf">Inregistrare profil profesor</string>
+    <string name="inregistrarePrStud">Inregistrare profil student</string>
     <string name="conectareProf">Conectare profil profesor</string>
     <string name="conectareStud">Conectare profil student</string>
     <string name="id_mailConectareStud">E-mail</string>
@@ -37,7 +38,7 @@
     <string name="alegeMaterieQuizNou">Alege o materie pentru a parcurge un test nou:</string>
     <string name="id_numeUtilizatorContS">Buna, ....</string>
     <string name="id_spinnerMaterieS"></string>
-    <string name="id_boutonQuizNouS">Începe testul!</string>
+    <string name="id_boutonQuizNouS">Incepe testul!</string>
     <string name="contPersonalProf">Cont personal</string>
     <string name="bunaProf">Buna, ...</string>
     <string name="adQuiz">Adaugare test</string>
@@ -45,7 +46,7 @@
     <string name="feedback">Ofera feedback</string>
     <string name="titluListaQuizProf">Lista teste existente:</string>
     <string name="listaQuizProf"></string>
-    <string name="titluIntroducereCod">Pentru a vizualiza progresul studentului, introduceți codul!</string>
+    <string name="titluIntroducereCod">Pentru a vizualiza progresul studentului, introduceti codul!</string>
     <string name="hintIntroducereCod">Cod student</string>
     <string name="progresTitlu">Progres student</string>
     <string name="gridViewProgresStudent"></string>
@@ -54,8 +55,8 @@
     <string name="listaStudentiFdb"></string>
     <string name="searchViewStudentFdb"></string>
     <string name="adTestButton">Adaugă test!</string>
-    <string name="spinnerTipIntrebare">Alege tipul de întrebare</string>
-    <string name="TValegeTipIntrebare">Alege tipul de întrebare</string>
+    <string name="spinnerTipIntrebare">Alege tipul de intrebare</string>
+    <string name="TValegeTipIntrebare">Alege tipul de intrebare</string>
     <string name="intrebare1">Intrebare 1</string>
     <string name="intrebare2">Intrebare 2</string>
     <string name="intrebare3">Intrebare 3</string>
@@ -63,30 +64,30 @@
     <string name="intrebare5">Intrebare 5</string>
     <string name="raspunsDeschis">Adauga raspuns</string>
     <string name="butonSubmit">Finalizeaza testul</string>
-    <string name="terminareTest">Ați finalizat testul!</string>
+    <string name="terminareTest">Ati finalizat testul!</string>
     <string name="punctajFinalTest">Punctajul acumulat:</string>
     <string name="nrRaspCorecteTest">Numar de raspunsuri corecte: n/M</string>
     <string name="dificultateTest">Dificultatea testului:</string>
     <string name="ratingBarDificultate"></string>
     <string name="butonSubmitFinalizareTest"></string>
-    <string name="TVfeedbackAplicatie">Ofera o nota aplicației,</string>
-    <string name="TVcomentariu">și, daca vrei sa ne transmiți ceva:</string>
-    <string name="TVms">Mulțumim! :)</string>
+    <string name="TVfeedbackAplicatie">Ofera o nota aplicatiei,</string>
+    <string name="TVcomentariu">si, daca vrei sa ne transmiti ceva:</string>
+    <string name="TVms">Multumim! :)</string>
     <string name="comentariuFeedbackAplicatie"></string>
     <string name="TVinfo"></string>
     <string name="denumireAplicatie">Android Quiz</string>
-    <string name="TVDescriere">Aplicație interactiva destinata crearii și susținerii de teste în mediul universitar. Aplicația se adreseaza atât profesorilor, permițând crearea și partajarea de teste, cât și studenților, aceștia fiind
-        evaluați într-o maniera inedita.
+    <string name="TVDescriere">Aplicatie interactiva destinata crearii si sustinerii de teste in mediul universitar. Aplicatia se adreseaza atat profesorilor, permitand crearea si partajarea de teste, cat si studentilor, acestia fiind
+        evaluati intr-o maniera inedita.
     </string>
     <string name="TVtitluContact">Contacteaza-ne!</string>
     <string name="TVmailContact">Mail: androidquiz@gmail.com</string>
     <string name="TVtelefonContact">Telefon: 0349 145 147</string>
-    <string name="TVadresaContact">Adresa: Calea Dorobanți nr. 15-17, Sector 1, București.</string>
-    <string name="TVsite">Proiect în cadrul Facultații de Cibernetica, Statistica și Informatica Economica</string>
+    <string name="TVadresaContact">Adresa: Calea Dorobanti nr. 15-17, Sector 1, Bucuresti.</string>
+    <string name="TVsite">Proiect in cadrul Facultatii de Cibernetica, Statistica si Informatica Economica</string>
     <string name="buttonOferaFeedback">Ofera nota</string>
-    <string name="TVpartajareCatre">Partajați testul catre:</string>
-    <string name="parasesteContStudent">Parasește contul</string>
-    <string name="parasesteContProfesor">Parasește contul</string>
+    <string name="TVpartajareCatre">Partajati testul catre:</string>
+    <string name="parasesteContStudent">Paraseste contul</string>
+    <string name="parasesteContProfesor">Paraseste contul</string>
     <string name="schimbaParola">Schimba parola</string>
     <string name="intrebare1P">Cum putem initializa pointerii in JAVA?</string>
         <string name ="radioBtn11">folosind mai multi operatori</string>
