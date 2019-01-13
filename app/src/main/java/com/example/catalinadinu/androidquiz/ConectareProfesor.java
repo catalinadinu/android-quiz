@@ -135,8 +135,7 @@ public class ConectareProfesor extends Activity {
                         String cod = profObj.getString("cod");
                         UtilizatorProfesor profesor = new UtilizatorProfesor(email, parola, cod);
                         profesoriConectare.add(profesor);
-                        Log.d("plss", "Date descarcate "+profesor.afisareConectare());
-                        Log.d("lista", profesoriConectare+"");
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -184,7 +183,7 @@ public class ConectareProfesor extends Activity {
                     if(!emailProf.getText().toString().equals(prof.getEmail()) &&
                             !parolaProf.getText().toString().equals(prof.getParola()) &&
                             !cod.getText().toString().equals(prof.getCod())){
-                        Log.d("email", emailProf.getText().toString() +"+"+prof.getEmail());
+
                         Toast.makeText(getApplicationContext(), "Datele nu sunt introduse corect!", Toast.LENGTH_SHORT).show();
                     }
 //                    else if(){
@@ -195,7 +194,7 @@ public class ConectareProfesor extends Activity {
 //                    }
                     else if(emailProf.getText().toString().equals(prof.getEmail()) &&
                             parolaProf.getText().toString().equals(prof.getParola()) && cod.getText().toString().equals(prof.getCod())){
-                        Log.d("caca", emailProf.getText().toString()+""+ emailProf.getText().toString().equals(prof.getEmail()+""));
+
 
                         Toast.makeText(getApplicationContext(), "Cont corect!", Toast.LENGTH_SHORT).show();
                         Intent intentConectareProf = new Intent(ConectareProfesor.this, ContProfesor.class);

@@ -47,7 +47,7 @@ public class Intrebari {
         String alegere = listaGrile[i][2];
         return alegere;
     }
-    public String obtineGrila4(int i) 
+    public String obtineGrila4(int i)
     {
         String alegere = listaGrile[i][3];
         return alegere;

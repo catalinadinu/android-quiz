@@ -63,7 +63,7 @@ public class AdaugareTest extends Activity {
                 if(spinnerTipIntrebare.getSelectedItem().toString().equals("Grila")){
                     IntrebareGrilaAdaptor adaptorGrila = new IntrebareGrilaAdaptor(getApplicationContext(), intrebareGrila);
                     listViewRaspunsGrila.setAdapter(adaptorGrila);
-                    //listViewRaspunsDeschis.setVisibility(View.GONE);
+
                 }
                 else if(spinnerTipIntrebare.getSelectedItem().toString().equals("Raspuns deschis")){
                     IntrebareDeschisaAdaptor adaptorDeschis  = new IntrebareDeschisaAdaptor(getApplicationContext(), intrebareDeschisa);

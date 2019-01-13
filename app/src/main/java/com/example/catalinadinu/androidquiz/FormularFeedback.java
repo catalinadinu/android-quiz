@@ -33,7 +33,7 @@ public class FormularFeedback extends Activity {
         studentiFeedback = findViewById(R.id.listaStudentiFdb);
         backContProfFdb = findViewById(R.id.backContProfFdb);
 
-        //facut pt adaptor personalizat
+
         UtilizatorStudent[] studenti = new UtilizatorStudent[]{
                 new UtilizatorStudent("Popescu", "Ana", "ana@gmail.com", "A10"),
                 new UtilizatorStudent("Popescu", "Vlad", "ion@gmail.com","A11"),
@@ -50,7 +50,7 @@ public class FormularFeedback extends Activity {
         StudentiAdaptorPersonalizat adaptorPersonalizat = new StudentiAdaptorPersonalizat(this,android.R.layout.simple_list_item_1 ,listaStudenti);
         studentiFeedback.setAdapter(adaptorPersonalizat);
 
-        //item selectat din listview
+
         studentiFeedback.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
             @Override
@@ -65,8 +65,7 @@ public class FormularFeedback extends Activity {
 
 
 
-    //search view in care introduce codul studentului si dupa ce il gaseste in listview, apasa pe
-    // el si ii apare un pop-up in care introduce nota si da salvare (pop-up cu introduceti nota si salvare)
+
     public void butonBackContProf(View view){
         Intent intentBack = new Intent(FormularFeedback.this, ContProfesor.class);
         startActivityForResult(intentBack, 5);

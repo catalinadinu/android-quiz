@@ -50,7 +50,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     }
 
     public void trimiteNume() {
-        //intent implicit pentru a transfera parametrii
+
         String first = prenume.getText().toString();
 
         Intent intent1 = new Intent(InregistrareProfilProfesor.this, ContProfesor.class);
@@ -62,7 +62,7 @@ public class InregistrareProfilProfesor extends AppCompatActivity {
     }
 
     public void trimiteEmailProfesor(){
-        //baza de date
+
         String emailProfTextView = email.getText().toString();
         ContractBazaDate bazaDate = new ContractBazaDate(this);
         Cursor cursor = bazaDate.getInregistrareDataProfCursor(emailProfTextView);

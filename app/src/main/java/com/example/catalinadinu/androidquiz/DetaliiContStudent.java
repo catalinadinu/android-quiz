@@ -55,7 +55,7 @@ public class DetaliiContStudent extends AppCompatActivity {
         tVPrenumeStud.setText(prenume);
         tVEmailStud.setText(emaill);
 
-        //functie pentru stergere
+
         buttonStergeCont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -37,7 +37,7 @@ public class DetaliiContProfesor extends AppCompatActivity {
         salveaza = findViewById(R.id.txtProf);
 
         ContractBazaDate database=new ContractBazaDate(getApplicationContext());
-        //aici crapa
+
         Cursor cursor = database.getProfBDDataCursor(InregistrareProfilProfesor.profesorDetaliiCont.getEmail());
         cursor.moveToFirst();
 
@@ -54,7 +54,7 @@ public class DetaliiContProfesor extends AppCompatActivity {
         tVPrenumeProf.setText(prenume);
         tVEmailProf.setText(emaill);
 
-        //functie pentru stergere
+
         buttonStergeContProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
