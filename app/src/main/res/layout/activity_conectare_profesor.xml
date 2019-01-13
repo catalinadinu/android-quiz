@@ -35,42 +35,36 @@
         android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="96dp"
         android:background="#0F194C"
         android:fontFamily="casual"
         android:onClick="conectareProfesor"
         android:text="@string/id_butonConectare"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_codProfConectare"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintTop_toBottomOf="@+id/id_codProfConectare" />
 
     <EditText
         android:id="@+id/id_emailProfConectare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="#0F194C"
         android:ems="10"
         android:fontFamily="casual"
         android:hint="@string/id_emailProfConectare"
         android:inputType="textEmailAddress"
         android:textColorHint="#111E6C"
-        app:layout_constraintBottom_toTopOf="@+id/id_parolaProfConectare"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/conectareProf"
-        app:layout_constraintVertical_bias="0.785"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
@@ -78,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#0F194C"
         android:ems="10"
@@ -88,14 +83,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintTop_toBottomOf="@+id/id_emailProfConectare" />
 
     <EditText
         android:id="@+id/id_codProfConectare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#0F194C"
         android:ems="10"
@@ -112,24 +107,30 @@
         android:id="@+id/buttonSH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="44dp"
+        android:layout_marginBottom="8dp"
         android:onClick="saveInfo"
         android:text="@string/buttonSH"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_butonConectare" />
+        app:layout_constraintTop_toBottomOf="@+id/id_butonConectare"
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="58dp"
         android:layout_height="32dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_butonConectare" />
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toEndOf="@+id/buttonSH"
+        app:layout_constraintTop_toBottomOf="@+id/id_butonConectare"
+        app:layout_constraintVertical_bias="0.144" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
