@@ -123,7 +123,6 @@ public class ConectareProfesor extends Activity {
             String url = "https://pastebin.com/raw/viSk5R02";
             String jsonStr = sh.makeServiceCall(url);
 
-            //Log.d("cacatttttt", "am ajuns aici " + jsonStr);
             if (jsonStr != null) {
                 try {
                     JSONObject jsonObject = new JSONObject(jsonStr);
@@ -131,16 +130,11 @@ public class ConectareProfesor extends Activity {
 
                     for (int i = 0; i < profesori.length(); i++) {
                         JSONObject profObj = profesori.getJSONObject(i);
-                        //profesor.setEmail(profObj.getString("email"));
                         String email = profObj.getString("email");
-                        //Log.d("plm", email);
                         String parola = profObj.getString("parola");
-                        //Log.d("plm", parola);
                         String cod = profObj.getString("cod");
-                        //Log.d("plm", cod);
-                       // profesor.setCod(profObj.getString("cod"));
                         UtilizatorProfesor profesor = new UtilizatorProfesor(email, parola, cod);
-                        profesoriConectare.add(profesor); //?
+                        profesoriConectare.add(profesor);
                         Log.d("plss", "Date descarcate "+profesor.afisareConectare());
                         Log.d("lista", profesoriConectare+"");
                     }

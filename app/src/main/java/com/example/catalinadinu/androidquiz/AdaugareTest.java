@@ -28,7 +28,6 @@ public class AdaugareTest extends Activity {
     private ListView listViewRaspunsDeschis;
     private Button adTest;
 
-    //aici ar trebui sa se adauge testul in tabela pe care o sa o facem mai tarziu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +66,6 @@ public class AdaugareTest extends Activity {
                     //listViewRaspunsDeschis.setVisibility(View.GONE);
                 }
                 else if(spinnerTipIntrebare.getSelectedItem().toString().equals("Raspuns deschis")){
-                    Log.d("plm", "urmeaza");
                     IntrebareDeschisaAdaptor adaptorDeschis  = new IntrebareDeschisaAdaptor(getApplicationContext(), intrebareDeschisa);
                     listViewRaspunsDeschis.setAdapter(adaptorDeschis);
                     listViewRaspunsGrila.setVisibility(View.GONE);
@@ -80,14 +78,6 @@ public class AdaugareTest extends Activity {
             }
         });
 
-//        Log.d("grila", listViewRaspunsGrila.getVisibility()+"");
-//        Log.d("deschis", listViewRaspunsDeschis.getVisibility()+"");
-//        if(listViewRaspunsGrila.getVisibility() == View.VISIBLE){
-//            listViewRaspunsDeschis.setVisibility(View.GONE);
-//        }
-//        else if(listViewRaspunsDeschis.getVisibility() == View.VISIBLE){
-//            listViewRaspunsGrila.setVisibility(View.GONE);
-//        }
     }
 
     public void adaugaTest(View view)

@@ -76,9 +76,7 @@ public class ConectareStudent extends Activity {
                         String parola = profObj.getString("parola");
                         String cod = profObj.getString("cod");
                         UtilizatorStudent student = new UtilizatorStudent(email, parola, cod);
-                        studentiConectare.add(student); //?
-                        //Log.d("plss", "Date descarcate "+student.afisareConectare());
-                        //Log.d("lista", studentiConectare+"");
+                        studentiConectare.add(student);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -150,7 +148,7 @@ public class ConectareStudent extends Activity {
                     if (!email.getText().toString().equals(stud.getEmail()) &&
                             !parola.getText().toString().equals(stud.getParola()) &&
                             !cod.getText().toString().equals(stud.getCodStudent())) {
-                        Log.d("email", email.getText().toString() + "+" + stud.getEmail());
+                        //Log.d("email", email.getText().toString() + "+" + stud.getEmail());
                         Toast.makeText(getApplicationContext(), "Datele nu sunt introduse corect!", Toast.LENGTH_SHORT).show();
                     }
 //                    else if(){
